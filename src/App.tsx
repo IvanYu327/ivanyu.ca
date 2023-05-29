@@ -3,6 +3,7 @@ import styled, { keyframes, ThemeProvider } from "styled-components";
 
 import { theme } from "./shared/theme";
 
+const DO_ANIMATION = false;
 const TETRIS_UNIT_SQUARE = 10;
 const ANIMATION_TIME = 2000;
 const FADE_TIME = 750;
@@ -12,32 +13,42 @@ const App: React.FC = () => {
   const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => {
-      setExpanded(true);
-    }, ANIMATION_TIME);
-    setTimeout(() => {
-      setShowContent(true);
-    }, ANIMATION_TIME + 250);
+    if (DO_ANIMATION) {
+      setTimeout(() => {
+        setExpanded(true);
+      }, ANIMATION_TIME);
+      setTimeout(() => {
+        setShowContent(true);
+      }, ANIMATION_TIME + 250);
+    } else {
+      setTimeout(() => {
+        setShowContent(true);
+      }, 250);
+    }
   }, []);
 
   return (
     <ThemeProvider theme={theme}>
       <AppContainer>
-        <TetrisContainer expanded={expanded}>
-          <FilledTetris expanded={expanded} height={4} width={6} />
-          <EmptyTetris expanded={expanded} height={4} width={1} />
-          <FilledTetris expanded={expanded} height={4} width={3} />
-          {/* <FilledTetris expanded={expanded} height={1} width={5} />
-          <EmptyTetris expanded={expanded} height={1} width={3} />
-          <FilledTetris expanded={expanded} height={1} width={2} />
+        {DO_ANIMATION && (
+          <>
+            <TetrisContainer expanded={expanded}>
+              <FilledTetris expanded={expanded} height={4} width={6} />
+              <EmptyTetris expanded={expanded} height={4} width={1} />
+              <FilledTetris expanded={expanded} height={4} width={3} />
+              {/* <FilledTetris expanded={expanded} height={1} width={5} />
+              <EmptyTetris expanded={expanded} height={1} width={3} />
+              <FilledTetris expanded={expanded} height={1} width={2} />
 
-          <FilledTetris expanded={expanded} height={1} width={6} />
-          <EmptyTetris expanded={expanded} height={1} width={1} />
-          <FilledTetris expanded={expanded} height={1} width={3} />
+              <FilledTetris expanded={expanded} height={1} width={6} />
+              <EmptyTetris expanded={expanded} height={1} width={1} />
+              <FilledTetris expanded={expanded} height={1} width={3} />
 
-          <FilledTetris expanded={expanded} height={2} width={10} /> */}
-        </TetrisContainer>
-        <TetrisPiece expanded={expanded} />
+              <FilledTetris expanded={expanded} height={2} width={10} /> */}
+            </TetrisContainer>
+            <TetrisPiece expanded={expanded} />
+          </>
+        )}
         <WebsiteContent showContent={showContent}>
           {"Actual Website Content ".repeat(1000)}
         </WebsiteContent>
