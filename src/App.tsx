@@ -1,21 +1,12 @@
 import React, { useEffect, useState } from "react";
-import styled, { keyframes, Keyframes } from "styled-components";
+import styled, { keyframes } from "styled-components";
 
-const fadeIn: Keyframes = keyframes`
-  from {
-    opacity: 0;
+const tetrisAnimation = keyframes`
+  0% {
+    transform: translateY(-60vh);
   }
-  to {
-    opacity: 1;
-  }
-`;
-
-const fadeOut: Keyframes = keyframes`
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
+  100% {
+    transform: translateY(0);
   }
 `;
 
