@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled, { keyframes } from "styled-components";
 
-const TETRIS_UNIT_SQUARE = 10;
+const TETRIS_UNIT_SQUARE = 20;
 const ANIMATION_TIME = 1500;
 
 const App: React.FC = () => {
