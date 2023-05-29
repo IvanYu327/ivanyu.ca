@@ -25,8 +25,17 @@ const App: React.FC = () => {
       <AppContainer>
         <TetrisContainer expanded={expanded}>
           <FilledTetris expanded={expanded} height={4} width={6} />
-          <EmptyTetris expanded={expanded} height={4} width={1} color="" />
+          <EmptyTetris expanded={expanded} height={4} width={1} />
           <FilledTetris expanded={expanded} height={4} width={3} />
+          {/* <FilledTetris expanded={expanded} height={1} width={5} />
+          <EmptyTetris expanded={expanded} height={1} width={3} />
+          <FilledTetris expanded={expanded} height={1} width={2} />
+
+          <FilledTetris expanded={expanded} height={1} width={6} />
+          <EmptyTetris expanded={expanded} height={1} width={1} />
+          <FilledTetris expanded={expanded} height={1} width={3} />
+
+          <FilledTetris expanded={expanded} height={2} width={10} /> */}
         </TetrisContainer>
         <TetrisPiece expanded={expanded} />
         <WebsiteContent showContent={showContent}>
@@ -72,6 +81,7 @@ const TetrisPiece = styled.div<{ expanded: boolean }>`
 
 const TetrisContainer = styled.div<{ expanded: boolean }>`
   display: flex;
+  flex-wrap: wrap;
   position: fixed;
   top: 50vh;
   left: 50vw;
@@ -103,10 +113,9 @@ const EmptyTetris = styled.div<{
   expanded: boolean;
   width: number;
   height: number;
-  color: string;
 }>`
-  background-color: ${({ expanded, color }) =>
-    expanded ? (props) => props.theme.tetrisColor : color};
+  background-color: ${({ expanded }) =>
+    expanded ? (props) => props.theme.tetrisColor : ""};
   width: ${({ width }) => TETRIS_UNIT_SQUARE * width}px;
   height: ${({ height }) => TETRIS_UNIT_SQUARE * height}px;
   // display: ${({ expanded }) => (expanded ? "none" : "")};
