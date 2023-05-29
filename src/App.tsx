@@ -62,8 +62,6 @@ const TetrisContainer = styled.div<{ expanded: boolean }>`
   height: ${TETRIS_UNIT_SQUARE * 4}px;
   position: absolute;
   display: flex;
-  justify-content: center;
-  align-items: center;
   top: 50vh;
   left: 50vw;
   transform: translate(-50%, -50%)
