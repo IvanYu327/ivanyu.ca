@@ -26,7 +26,7 @@ const App: React.FC = () => {
       </TetrisContainer>
       <TetrisPiece expanded={expanded} />
       <WebsiteContent showContent={showContent}>
-        Actual Website Content
+        {"Actual Website Content ".repeat(1000)}
       </WebsiteContent>
     </div>
   );
@@ -46,7 +46,7 @@ const tetrisAnimation = keyframes`
 const TetrisPiece = styled.div<{ expanded: boolean }>`
   width: ${TETRIS_UNIT_SQUARE}px;
   height: ${TETRIS_UNIT_SQUARE * 4}px;
-  position: absolute;
+  position: fixed;
   top: calc(50vh - ${TETRIS_UNIT_SQUARE * 2}px);
   left: calc(50vw + ${TETRIS_UNIT_SQUARE}px);
   background-color: black;
@@ -60,7 +60,7 @@ const TetrisPiece = styled.div<{ expanded: boolean }>`
 const TetrisContainer = styled.div<{ expanded: boolean }>`
   width: ${TETRIS_UNIT_SQUARE * 10}px;
   height: ${TETRIS_UNIT_SQUARE * 4}px;
-  position: absolute;
+  position: fixed;
   display: flex;
   top: 50vh;
   left: 50vw;
@@ -83,6 +83,7 @@ const Rectangle = styled.div<{
 `;
 
 const WebsiteContent = styled.div<{ showContent: boolean }>`
+  visibility: ${({ showContent }) => (showContent ? "visible" : "hidden")};
   opacity: ${({ showContent }) => (showContent ? 1 : 0)};
-  transition: opacity 0.5s;
+  transition: opacity 0.5s, visibility 0.5s;
 `;
