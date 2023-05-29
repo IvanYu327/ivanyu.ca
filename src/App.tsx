@@ -18,7 +18,7 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <AppWrapper>
+    <div>
       <TetrisContainer expanded={expanded}>
         <Rectangle expanded={expanded} height={4} width={6} color="black" />
         <Rectangle expanded={expanded} height={4} width={1} color="white" />
@@ -28,15 +28,11 @@ const App: React.FC = () => {
       <WebsiteContent showContent={showContent}>
         Actual Website Content
       </WebsiteContent>
-    </AppWrapper>
+    </div>
   );
 };
 
 export default App;
-
-const AppWrapper = styled.div`
-  position: relative;
-`;
 
 const tetrisAnimation = keyframes`
   0% {
