@@ -3,7 +3,7 @@ import styled, { keyframes, ThemeProvider } from "styled-components";
 
 import { theme } from "./shared/theme";
 
-const TETRIS_UNIT_SQUARE = 20;
+const TETRIS_UNIT_SQUARE = 10;
 const ANIMATION_TIME = 2000;
 const FADE_TIME = 750;
 
@@ -24,19 +24,9 @@ const App: React.FC = () => {
     <ThemeProvider theme={theme}>
       <AppContainer>
         <TetrisContainer expanded={expanded}>
-          <Rectangle
-            expanded={expanded}
-            height={4}
-            width={6}
-            color={theme.tetrisColor}
-          />
-          <Rectangle expanded={expanded} height={4} width={1} color="" />
-          <Rectangle
-            expanded={expanded}
-            height={4}
-            width={3}
-            color={theme.tetrisColor}
-          />
+          <FilledTetris expanded={expanded} height={4} width={6} />
+          <EmptyTetris expanded={expanded} height={4} width={1} color="" />
+          <FilledTetris expanded={expanded} height={4} width={3} />
         </TetrisContainer>
         <TetrisPiece expanded={expanded} />
         <WebsiteContent showContent={showContent}>
@@ -69,11 +59,15 @@ const TetrisPiece = styled.div<{ expanded: boolean }>`
   top: calc(50vh - ${TETRIS_UNIT_SQUARE * 2}px);
   left: calc(50vw + ${TETRIS_UNIT_SQUARE - 1}px);
   background-color: ${(props) => props.theme.tetrisColor};
+  // box-shadow: -1px 10px 10px -5px rgba(0, 0, 0, 0.3),
+  //             -1px -10px 10px -5px rgba(0, 0, 0, 0.3);
   animation: ${tetrisAnimation} ${ANIMATION_TIME * 0.5}ms forwards;
   transform: translate(-50%, -50%)
   opacity: ${({ expanded }) => (expanded ? 0 : 1)};
   transition: all ${FADE_TIME}ms ease-out;
   display: ${({ expanded }) => (expanded ? "none" : "")};
+  z-index: 999;
+
 `;
 
 const TetrisContainer = styled.div<{ expanded: boolean }>`
@@ -86,14 +80,26 @@ const TetrisContainer = styled.div<{ expanded: boolean }>`
   background-color: ${({ expanded }) =>
     expanded ? (props) => props.theme.tetrisColor : ""};
   border-color: none;
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
   transform: translate(-50%, -50%)
     scale(${({ expanded }) => (expanded ? 1.2 : 1)});
   opacity: ${({ expanded }) => (expanded ? 0 : 1)};
   transition: all ${FADE_TIME}ms ease-out;
 `;
 
-const Rectangle = styled.div<{
+const FilledTetris = styled.div<{
+  expanded: boolean;
+  width: number;
+  height: number;
+}>`
+  background-color: ${(props) => props.theme.tetrisColor};
+  // box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+
+  width: ${({ width }) => TETRIS_UNIT_SQUARE * width}px;
+  height: ${({ height }) => TETRIS_UNIT_SQUARE * height}px;
+  // display: ${({ expanded }) => (expanded ? "none" : "")};
+`;
+
+const EmptyTetris = styled.div<{
   expanded: boolean;
   width: number;
   height: number;
@@ -103,6 +109,7 @@ const Rectangle = styled.div<{
     expanded ? (props) => props.theme.tetrisColor : color};
   width: ${({ width }) => TETRIS_UNIT_SQUARE * width}px;
   height: ${({ height }) => TETRIS_UNIT_SQUARE * height}px;
+  // display: ${({ expanded }) => (expanded ? "none" : "")};
 `;
 
 const WebsiteContent = styled.div<{ showContent: boolean }>`
