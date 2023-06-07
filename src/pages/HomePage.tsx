@@ -1,6 +1,6 @@
 import React from "react";
 
-const HomePage = () => {
+const HomePage: React.FC = () => {
   return <div>{"Homepage ".repeat(500)}</div>;
 };
 
