@@ -4,7 +4,7 @@ export const theme = {
       dark: "#0D1117",
       light: "white",
     },
-    tetris: "black",
+    tetris: "white",
     text: {
       dark: {
         white: "#FFFFFFDE",
