@@ -5,6 +5,9 @@ import styled, { keyframes, ThemeProvider } from "styled-components";
 import { theme } from "./shared/theme";
 
 import ErrorPage from "./pages/ErrorPage";
+import HomePage from "./pages/HomePage";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const DO_ANIMATION = true;
 const TETRIS_UNIT_SQUARE = 10;
@@ -33,14 +36,13 @@ const App: React.FC = () => {
   return (
     <Router>
       <ThemeProvider theme={theme}>
-        <AppContainer>
-          {DO_ANIMATION && (
-            <>
-              <TetrisContainer expanded={expanded}>
-                <FilledTetris expanded={expanded} height={4} width={6} />
-                <EmptyTetris expanded={expanded} height={4} width={1} />
-                <FilledTetris expanded={expanded} height={4} width={3} />
-                {/* <FilledTetris expanded={expanded} height={1} width={5} />
+        {DO_ANIMATION && (
+          <>
+            <TetrisContainer expanded={expanded}>
+              <FilledTetris expanded={expanded} height={4} width={6} />
+              <EmptyTetris expanded={expanded} height={4} width={1} />
+              <FilledTetris expanded={expanded} height={4} width={3} />
+              {/* <FilledTetris expanded={expanded} height={1} width={5} />
               <EmptyTetris expanded={expanded} height={1} width={3} />
               <FilledTetris expanded={expanded} height={1} width={2} />
 
@@ -49,22 +51,23 @@ const App: React.FC = () => {
               <FilledTetris expanded={expanded} height={1} width={3} />
 
               <FilledTetris expanded={expanded} height={2} width={10} /> */}
-              </TetrisContainer>
-              <TetrisPiece expanded={expanded} />
-            </>
-          )}
-          <ContentWrapper showContent={showContent}>
-            {/* <Navbar /> */}
-            {"Actual Website Content ".repeat(1000)}
+            </TetrisContainer>
+            <TetrisPiece expanded={expanded} />
+          </>
+        )}
+        <AppContainer showContent={showContent}>
+          <Navbar />
+          <ContentWrapper>
+            {/* {"Actual Website Content ".repeat(1000)} */}
             <Routes>
               <Route path="/*" element={<ErrorPage />} />
-              {/* <Route path="/" element={<Home />} /> */}
+              <Route path="/" element={<HomePage />} />
               {/* <Route path="/about" element={<About />} /> */}
               {/* <Route path="/work" element={<Work />} /> */}
               {/* <Route path="/:projectName" element={<ProjectPage />} /> */}
             </Routes>
-            {/* <Footer /> */}
           </ContentWrapper>
+          <Footer />
         </AppContainer>
       </ThemeProvider>
     </Router>
@@ -73,16 +76,20 @@ const App: React.FC = () => {
 
 export default App;
 
-const AppContainer = styled.div`
+const AppContainer = styled.div<{ showContent: boolean }>`
   background-color: ${(props) => props.theme.background};
-`;
+  min-height: 100vh;
 
-const ContentWrapper = styled.div<{ showContent: boolean }>`
-  max-width: 1040px;
-  margin: auto;
   visibility: ${({ showContent }) => (showContent ? "visible" : "hidden")};
   opacity: ${({ showContent }) => (showContent ? 1 : 0)};
   transition: opacity ${FADE_TIME}ms, visibility ${FADE_TIME}ms;
+`;
+
+const ContentWrapper = styled.div`
+  background-color: red;
+  max-width: 1040px;
+  padding: 0 20px;
+  margin: auto;
 `;
 
 const tetrisAnimation = keyframes`
