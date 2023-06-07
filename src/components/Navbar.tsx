@@ -31,7 +31,7 @@ const NavbarContainer = styled.nav`
   position: relative;
   bottom: 0;
   width: 100%;
-  height: ${sizes.navbar.height}; /* Adjust the height as needed */
+  height: ${sizes.navbar.height};
   z-index: 1; v
 `;
 
@@ -41,7 +41,7 @@ const ContentWrapper = styled.div`
   align-items: center;
   max-width: ${sizes.maxWidth};
   width: 100%;
-  padding: 0 10px; /* Adjust the padding as needed */
+  padding: 0 10px;
 `;
 
 const NavItems = styled.div`
@@ -54,11 +54,12 @@ const NavLink = styled(Link)`
   color: ${theme.colors.text.dark.white};
   text-decoration: none;
 
+  transition: all 0.5s ease;
   &:hover {
     color: grey;
   }
 `;
 
 const NavbarText = styled.div`
-  color: ${theme.colors.text.dark.white}; /* Customize the color as needed */
+  color: ${theme.colors.text.dark.white};
 `;
