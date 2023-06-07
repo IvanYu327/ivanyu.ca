@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import styled, { keyframes, ThemeProvider } from "styled-components";
 
 import { theme } from "./shared/theme";
 
-const DO_ANIMATION = false;
+import ErrorPage from "./pages/ErrorPage";
+
+const DO_ANIMATION = true;
 const TETRIS_UNIT_SQUARE = 10;
 const ANIMATION_TIME = 2000;
 const FADE_TIME = 750;
@@ -28,15 +31,16 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <ThemeProvider theme={theme}>
-      <AppContainer>
-        {DO_ANIMATION && (
-          <>
-            <TetrisContainer expanded={expanded}>
-              <FilledTetris expanded={expanded} height={4} width={6} />
-              <EmptyTetris expanded={expanded} height={4} width={1} />
-              <FilledTetris expanded={expanded} height={4} width={3} />
-              {/* <FilledTetris expanded={expanded} height={1} width={5} />
+    <Router>
+      <ThemeProvider theme={theme}>
+        <AppContainer>
+          {DO_ANIMATION && (
+            <>
+              <TetrisContainer expanded={expanded}>
+                <FilledTetris expanded={expanded} height={4} width={6} />
+                <EmptyTetris expanded={expanded} height={4} width={1} />
+                <FilledTetris expanded={expanded} height={4} width={3} />
+                {/* <FilledTetris expanded={expanded} height={1} width={5} />
               <EmptyTetris expanded={expanded} height={1} width={3} />
               <FilledTetris expanded={expanded} height={1} width={2} />
 
@@ -45,15 +49,25 @@ const App: React.FC = () => {
               <FilledTetris expanded={expanded} height={1} width={3} />
 
               <FilledTetris expanded={expanded} height={2} width={10} /> */}
-            </TetrisContainer>
-            <TetrisPiece expanded={expanded} />
-          </>
-        )}
-        <WebsiteContent showContent={showContent}>
-          {"Actual Website Content ".repeat(1000)}
-        </WebsiteContent>
-      </AppContainer>
-    </ThemeProvider>
+              </TetrisContainer>
+              <TetrisPiece expanded={expanded} />
+            </>
+          )}
+          <ContentWrapper showContent={showContent}>
+            {/* <Navbar /> */}
+            {"Actual Website Content ".repeat(1000)}
+            <Routes>
+              <Route path="/*" element={<ErrorPage />} />
+              {/* <Route path="/" element={<Home />} /> */}
+              {/* <Route path="/about" element={<About />} /> */}
+              {/* <Route path="/work" element={<Work />} /> */}
+              {/* <Route path="/:projectName" element={<ProjectPage />} /> */}
+            </Routes>
+            {/* <Footer /> */}
+          </ContentWrapper>
+        </AppContainer>
+      </ThemeProvider>
+    </Router>
   );
 };
 
@@ -61,6 +75,14 @@ export default App;
 
 const AppContainer = styled.div`
   background-color: ${(props) => props.theme.background};
+`;
+
+const ContentWrapper = styled.div<{ showContent: boolean }>`
+  max-width: 1040px;
+  margin: auto;
+  visibility: ${({ showContent }) => (showContent ? "visible" : "hidden")};
+  opacity: ${({ showContent }) => (showContent ? 1 : 0)};
+  transition: opacity ${FADE_TIME}ms, visibility ${FADE_TIME}ms;
 `;
 
 const tetrisAnimation = keyframes`
@@ -130,10 +152,4 @@ const EmptyTetris = styled.div<{
   width: ${({ width }) => TETRIS_UNIT_SQUARE * width}px;
   height: ${({ height }) => TETRIS_UNIT_SQUARE * height}px;
   // display: ${({ expanded }) => (expanded ? "none" : "")};
-`;
-
-const WebsiteContent = styled.div<{ showContent: boolean }>`
-  visibility: ${({ showContent }) => (showContent ? "visible" : "hidden")};
-  opacity: ${({ showContent }) => (showContent ? 1 : 0)};
-  transition: opacity ${FADE_TIME}ms, visibility ${FADE_TIME}ms;
 `;
