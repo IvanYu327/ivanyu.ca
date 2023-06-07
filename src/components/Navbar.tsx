@@ -11,32 +11,21 @@ const Navbar: React.FC = () => {
   return (
     <NavbarContainer>
       <ContentWrapper>
-        <NavbarText>Ivan Yu</NavbarText>
-        <SocialIcons>
-          <SocialLink
-            to="mailto: i7yu@uwaterloo.ca?subject=Hi Ivan!"
-            target="_blank"
-          >
-            <SiMinutemailer size={ICON_SIZE} />
-          </SocialLink>
-          <SocialLink to="https://github.com/IvanYu327" target="_blank">
-            <FaGithub size={ICON_SIZE} />
-          </SocialLink>
-          <SocialLink
-            to="https://www.linkedin.com/in/ivanyu327/"
-            target="_blank"
-          >
-            <FaLinkedin size={ICON_SIZE} />
-          </SocialLink>
-        </SocialIcons>
+        <NavbarText>
+          <NavLink to="/">Ivan Yu</NavLink>
+        </NavbarText>
+
+        <NavItems>
+          <NavLink to="/projects">building</NavLink>
+          <NavLink to="/explore">exploring</NavLink>
+          <NavLink to="/about">me</NavLink>
+        </NavItems>
       </ContentWrapper>
     </NavbarContainer>
   );
 };
 
 export default Navbar;
-
-const ICON_SIZE = 32;
 
 const NavbarContainer = styled.nav`
   display: flex;
@@ -58,12 +47,12 @@ const ContentWrapper = styled.div`
   padding: 0 10px; /* Adjust the padding as needed */
 `;
 
-const SocialIcons = styled.div`
+const NavItems = styled.div`
   display: flex;
   align-items: center;
 `;
 
-const SocialLink = styled(Link)`
+const NavLink = styled(Link)`
   margin: 0 10px;
   color: ${theme.colors.text.dark.white};
   text-decoration: none;
