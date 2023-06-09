@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled, { keyframes } from "styled-components";
 
-import { theme } from "../styles";
+import { theme } from "../shared/styles";
 
 const TETRIS_UNIT_SQUARE = 10;
 const ANIMATION_TIME = 2000;

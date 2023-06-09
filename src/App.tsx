@@ -2,13 +2,17 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 
-import { theme, sizes } from "./styles";
+import { theme, sizes } from "./shared/styles";
 
 import ErrorPage from "./pages/ErrorPage";
-import HomePage from "./pages/HomePage";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import LoadingAnimation from "./components/LoadingAnimation";
+import Footer from "./components/Footer";
+
+import HomePage from "./pages/HomePage";
+import WritingPage from "./pages/Writing";
+import Projects from "./pages/Projects";
+import About from "./pages/About";
 
 const App: React.FC = () => {
   // const [expanded, setExpanded] = useState(false);
@@ -40,9 +44,9 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/*" element={<ErrorPage />} />
             <Route path="/" element={<HomePage />} />
-            {/* <Route path="/about" element={<About />} /> */}
-            {/* <Route path="/work" element={<Work />} /> */}
-            {/* <Route path="/:projectName" element={<ProjectPage />} /> */}
+            <Route path="/explore" element={<WritingPage />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </ContentWrapper>
         <Footer />

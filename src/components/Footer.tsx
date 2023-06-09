@@ -1,11 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { IoMdMail } from "react-icons/io";
 import { SiMinutemailer } from "react-icons/si";
 import styled from "styled-components";
 
-import { theme, sizes } from "../styles";
+import { theme, sizes } from "../shared/styles";
 
 const Footer: React.FC = () => {
   return (
@@ -45,7 +44,7 @@ const FooterContainer = styled.footer`
   position: relative;
   bottom: 0;
   width: 100%;
-  height: ${sizes.footer.height}; /* Adjust the height as needed */
+  height: ${sizes.footer.height};
   z-index: 1; v
 `;
 
@@ -55,7 +54,7 @@ const ContentWrapper = styled.div`
   align-items: center;
   max-width: ${sizes.maxWidth};
   width: 100%;
-  padding: 0 10px; /* Adjust the padding as needed */
+  padding: 0 10px;
 `;
 
 const SocialIcons = styled.div`
@@ -68,11 +67,12 @@ const SocialLink = styled(Link)`
   color: ${theme.colors.text.dark.white};
   text-decoration: none;
 
+  transition: all 0.5s ease;
   &:hover {
     color: grey;
   }
 `;
 
 const FooterText = styled.div`
-  color: ${theme.colors.text.dark.white}; /* Customize the color as needed */
+  color: ${theme.colors.text.dark.white};
 `;
