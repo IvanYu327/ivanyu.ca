@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 
-import { theme, sizes } from "./styles";
+import { theme, sizes } from "./shared/styles";
 
 import ErrorPage from "./pages/ErrorPage";
 import Navbar from "./components/Navbar";

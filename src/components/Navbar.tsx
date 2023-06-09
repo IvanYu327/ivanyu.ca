@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import { theme, sizes } from "../styles";
+import { theme, sizes } from "../shared/styles";
 
 const Navbar: React.FC = () => {
   return (

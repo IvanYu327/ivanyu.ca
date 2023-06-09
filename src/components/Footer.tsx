@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiMinutemailer } from "react-icons/si";
 import styled from "styled-components";
 
-import { theme, sizes } from "../styles";
+import { theme, sizes } from "../shared/styles";
 
 const Footer: React.FC = () => {
   return (
