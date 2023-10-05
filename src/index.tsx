@@ -50,6 +50,7 @@ const fonts = css`
 const resetStyles = css`
   html,
   body {
+    overflow-x: hidden;
   }
   html {
     height: 100%;
@@ -63,6 +64,7 @@ const resetStyles = css`
     padding: 0;
     width: 100vw;
     background-color: #0d1117;
+    color: white;
   }
   *,
   *:before,
