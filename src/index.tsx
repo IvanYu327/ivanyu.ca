@@ -62,7 +62,7 @@ const resetStyles = css`
     margin: 0;
     padding: 0;
     width: 100vw;
-    background-color: #141425;
+    background-color: #0d1117;
   }
   *,
   *:before,
