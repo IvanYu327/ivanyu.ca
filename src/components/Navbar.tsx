@@ -2,17 +2,22 @@ import React from "react";
 import { useLocation, Link } from "react-router-dom"; // Import useLocation and Link
 import styled from "styled-components";
 
+import { StyledLink } from "../styles";
+
 const Navbar: React.FC = () => {
   const location = useLocation();
   const pathSegments = location.pathname.split("/").filter(Boolean);
 
   return (
     <Container>
-      <div>
-        <NavLink>
-          <Link to={"/"}>ivan yu</Link>
-        </NavLink>
-      </div>
+      <TopContainer>
+        <StyledLink>
+          <Link to={"/"}>ivan-yu</Link>
+        </StyledLink>
+        <StyledLink>
+          <Link to={"/about"}>about</Link>
+        </StyledLink>
+      </TopContainer>
       <NavDirectory>
         {pathSegments.map((segment, index) => (
           <NavItem key={index}>
@@ -32,10 +37,16 @@ const Navbar: React.FC = () => {
 export default Navbar;
 
 const Container = styled.div`
-  height: 80px;
+  height: 50px;
   background: red;
   border-bottom: 0.5px solid white;
+  margin-top: 32px;
   margin-bottom: 32px;
+`;
+
+const TopContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
 `;
 
 const NavDirectory = styled.div`
