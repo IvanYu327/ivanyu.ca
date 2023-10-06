@@ -10,23 +10,19 @@ const Navbar: React.FC = () => {
 
   return (
     <Container>
-      <TopContainer>
-        <StyledLink>
-          <Link to={"/"}>ivan-yu</Link>
-        </StyledLink>
+      {/* <TopContainer>
         <StyledLink>
           <Link to={"/about"}>about</Link>
         </StyledLink>
-      </TopContainer>
+      </TopContainer> */}
       <NavDirectory>
+        <StyledLink to={"/"}>ivan-yu</StyledLink>
         {pathSegments.map((segment, index) => (
           <NavItem key={index}>
-            <div>/</div>
-            <NavLink>
-              <Link to={`/${pathSegments.slice(1, index + 1).join("/")}`}>
-                {segment}
-              </Link>
-            </NavLink>
+            <div>&nbsp;&nbsp;/&nbsp;&nbsp;</div>
+            <StyledLink to={`/${pathSegments.slice(1, index + 1).join("/")}`}>
+              {segment}
+            </StyledLink>
           </NavItem>
         ))}
       </NavDirectory>
@@ -37,10 +33,10 @@ const Navbar: React.FC = () => {
 export default Navbar;
 
 const Container = styled.div`
-  height: 50px;
-  background: red;
+  height: 32px;
+  //   background: red;
   border-bottom: 0.5px solid white;
-  margin-top: 32px;
+  margin-top: 48px;
   margin-bottom: 32px;
 `;
 
@@ -60,9 +56,4 @@ const NavItem = styled.div`
 const NavLink = styled.div`
   color: white;
   margin: 0 10px;
-
-  a {
-    text-decoration: none;
-    color: white;
-  }
 `;

@@ -24,11 +24,11 @@ const Home = () => {
       <WorkContainer>
         <WorkItem>
           <Heading3>work</Heading3>
-          <Body>I make stuff, check it out</Body>
+          <Body>I make tech stuff, check it out</Body>
         </WorkItem>
         <WorkItem>
           <Heading3>not work</Heading3>
-          <Body>mostly writing</Body>
+          <Body>fun, writing, and fun writing</Body>
         </WorkItem>
       </WorkContainer>
 

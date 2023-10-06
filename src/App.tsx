@@ -36,7 +36,7 @@ const AppContainer = styled.div`
   min-width: 400px;
   max-width: 940px;
   margin: 0 auto;
-  background: black;
+  // background: black;
 `;
 
 const ContentContainer = styled.div`

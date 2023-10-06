@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { DefaultTheme } from "styled-components";
 
 import { mediaQueries } from "../utils/responsive";
+import { Link } from "react-router-dom";
 
 export const theme: DefaultTheme = {
   colors: {
@@ -159,8 +160,9 @@ export const Caption = styled.p`
   font-style: italic;
 `;
 
-export const StyledLink = styled.a`
+export const StyledLink = styled(Link)`
   margin: 0px;
+  color: white;
   font-family: "Inter";
   font-size: 16px;
   font-weight: 400;
