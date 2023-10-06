@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 import { ROUTES } from "../constants/routes";
@@ -19,7 +19,36 @@ import {
 
 import ExperienceList from "./sections/Experience";
 
+const EXPLORE = [
+  {
+    heading: "my work",
+    description: "i build stuff, check it out.",
+    to: ROUTES.WORK
+  },
+  {
+    heading: "no other work",
+    description: "fun, writing, and some fun writing",
+    to: ROUTES.WRITING
+  },
+  {
+    heading: "me",
+    description: "more about me, if you're interested",
+    to: ROUTES.ABOUT
+  },
+  {
+    heading: "a surprise",
+    description: "fafo",
+    to: ROUTES.ABOUT
+  }
+  // {
+  //   heading: "my photography",
+  //   description: "foto"
+  // }
+];
+
 const Home = () => {
+  const navigate = useNavigate();
+
   const [activeHeading, setActiveHeading] = useState<number | null>(null);
 
   const handleHeadingHover = (index: number) => {
@@ -54,36 +83,34 @@ const Home = () => {
         >
           <Heading3>explore</Heading3>
         </Explore>
-        <div>
-          <ExploreHeading
-            active={activeHeading === null || activeHeading === 0}
-            onMouseEnter={() => handleHeadingHover(0)}
-            onMouseLeave={handleHeadingLeave}
-          >
-            my work
-          </ExploreHeading>
-          <ExploreHeading
-            active={activeHeading === null || activeHeading === 1}
-            onMouseEnter={() => handleHeadingHover(1)}
-            onMouseLeave={handleHeadingLeave}
-          >
-            my other work
-          </ExploreHeading>
-          <ExploreHeading
-            active={activeHeading === null || activeHeading === 2}
-            onMouseEnter={() => handleHeadingHover(2)}
-            onMouseLeave={handleHeadingLeave}
-          >
-            me
-          </ExploreHeading>
-          <ExploreHeading
-            active={activeHeading === null || activeHeading === 3}
-            onMouseEnter={() => handleHeadingHover(3)}
-            onMouseLeave={handleHeadingLeave}
-          >
-            a surprise
-          </ExploreHeading>
-        </div>
+        <ExploreHeadingContainer>
+          {EXPLORE.map((item) => {
+            return (
+              <ExploreHeading
+                key={EXPLORE.indexOf(item)}
+                active={
+                  activeHeading === null ||
+                  activeHeading === EXPLORE.indexOf(item)
+                }
+                onMouseEnter={() => handleHeadingHover(EXPLORE.indexOf(item))}
+                onMouseLeave={handleHeadingLeave}
+                onClick={() => navigate(item.to)}
+              >
+                {item.heading}
+              </ExploreHeading>
+            );
+          })}
+        </ExploreHeadingContainer>
+        <ExploreDescription
+          active={activeHeading !== null}
+          top={activeHeading ? activeHeading * 30 : 0}
+        >
+          <Heading3>
+            {activeHeading
+              ? EXPLORE[activeHeading].description
+              : EXPLORE[0].description}
+          </Heading3>
+        </ExploreDescription>
       </WorkContainer>
 
       <ExperienceContainer>
@@ -127,6 +154,10 @@ const SpinningThingContainer = styled.div`
   flex: 0 0 auto;
 `;
 
+const ExploreHeadingContainer = styled.div`
+  width: 200px;
+`;
+
 const WorkContainer = styled.div`
   margin-top: 32px;
   display: flex;
@@ -134,6 +165,14 @@ const WorkContainer = styled.div`
 
 const Explore = styled.div<{ active: boolean; top: number }>`
   width: 150px;
+  position: relative;
+  top: ${(props) => props.top}px;
+  transition: all 0.3s ease;
+  color: ${(props) => (props.active ? "white" : "gray")};
+`;
+
+const ExploreDescription = styled.div<{ active: boolean; top: number }>`
+  width: 400px;
   position: relative;
   top: ${(props) => props.top}px;
   transition: all 0.3s ease;
@@ -149,10 +188,6 @@ const ExploreHeading = styled(Heading3)<{ active: boolean }>`
 
 const Dummy = styled.div`
   width: 150px;
-`;
-
-const WorkItem = styled.div`
-  width: 50%;
 `;
 
 const ExperienceContainer = styled.div`
