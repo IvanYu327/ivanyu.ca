@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 import { ROUTES } from "../constants/routes";
@@ -23,7 +23,7 @@ import ExperienceList from "./sections/Experience";
 const EXPLORE = [
   {
     heading: "my work.",
-    description: "i build stuff, check it out.",
+    description: "i build stuff, check it out",
     to: ROUTES.WORK
   },
   {
@@ -67,7 +67,7 @@ const Home = () => {
           </Heading3>
           <br />
           <Heading3>
-            An avid rock climber, marine animal enthusiast, and Tetris addict.
+            An avid rock climber, marine organism enthusiast, and Tetris addict.
           </Heading3>
         </HeroText>
         <SpinningThingContainer>shark</SpinningThingContainer>
@@ -112,24 +112,10 @@ const Home = () => {
 
       <ExperienceContainer>
         <Dummy>
-          <Heading3>experience </Heading3>
+          <Heading3 style={{ color: "gray" }}>experience </Heading3>
         </Dummy>
         <ExperienceList />
       </ExperienceContainer>
-      <br />
-      <Heading1>Heading 1</Heading1>
-      <Heading2>Heading 2</Heading2>
-      <Heading3>Heading 3</Heading3>
-      <Heading4>Heading 4</Heading4>
-      <br />
-      <LargeBody>LargeBody</LargeBody>
-      <LargeBodyMedium>LargeBodyMedium</LargeBodyMedium>
-      <LargeBodyBold>LargeBodyBold</LargeBodyBold>
-      <br />
-      <Body>Body</Body>
-      <BodyMedium>BodyMedium</BodyMedium>
-      <BodyBold>BodyBold</BodyBold>
-      <Caption>Caption</Caption>
     </div>
   );
 };

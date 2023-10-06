@@ -12,7 +12,9 @@ const ExperienceList: React.FC = () => {
           <Logo />
           <div>
             <LargeBodyMedium>{experience.company}</LargeBodyMedium>
-            <LargeBody>{experience.position}</LargeBody>
+            <LargeBody style={{ marginTop: "4px" }}>
+              {experience.position}
+            </LargeBody>
           </div>
         </Container>
       ))}
