@@ -5,6 +5,7 @@ import styled from "styled-components";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import { ROUTES } from "./constants/routes";
+import About from "./views/About";
 import Home from "./views/Home";
 
 const App: React.FC = () => {
@@ -15,7 +16,7 @@ const App: React.FC = () => {
         <ContentContainer>
           <Routes>
             <Route path={ROUTES.MAIN} element={<Home />} />
-            <Route path={ROUTES.ABOUT} element={<div>about</div>} />
+            <Route path={ROUTES.ABOUT} element={<About />} />
 
             <Route path="*" element={<div>not found</div>} />
           </Routes>
@@ -40,5 +41,4 @@ const AppContainer = styled.div`
 
 const ContentContainer = styled.div`
   min-height: calc(100vh - 264px);
-  background: purple;
 `;
