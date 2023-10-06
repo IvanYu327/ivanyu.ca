@@ -2,24 +2,26 @@ import React from "react";
 import { useLocation } from "react-router-dom"; // Import useLocation and Link
 import styled from "styled-components";
 
-import { StyledLink } from "../styles";
+import { ROUTES } from "../constants/routes";
+import { Body, StyledLink } from "../styles";
 
 const Navbar: React.FC = () => {
   const location = useLocation();
   const pathSegments = location.pathname.split("/").filter(Boolean);
-
   return (
     <Container>
       <NavDirectory>
-        <StyledLink to={"/"}>ivan-yu</StyledLink>
-        {pathSegments.map((segment, index) => (
-          <NavItem key={index}>
-            <div>&nbsp;&nbsp;/&nbsp;&nbsp;</div>
-            <StyledLink to={`/${pathSegments.slice(1, index + 1).join("/")}`}>
-              {segment}
-            </StyledLink>
-          </NavItem>
-        ))}
+        <StyledLink to={ROUTES.MAIN}>ivan-yu</StyledLink>
+        {pathSegments.map((segment, index) => {
+          return (
+            <NavItem key={index}>
+              <Body>&nbsp;&nbsp;/&nbsp;&nbsp;</Body>
+              <StyledLink to={`/${pathSegments.slice(0, index + 1).join("/")}`}>
+                {segment}
+              </StyledLink>
+            </NavItem>
+          );
+        })}
       </NavDirectory>
     </Container>
   );
