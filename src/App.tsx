@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import ScrollToTop from "./components/ScrollToTop";
 import { ROUTES } from "./constants/routes";
 import About from "./views/About";
 import Home from "./views/Home";
@@ -13,6 +14,7 @@ import Writing from "./views/Writing";
 const App: React.FC = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <AppContainer>
         <Navbar />
         <ContentContainer>
