@@ -21,29 +21,25 @@ import ExperienceList from "./sections/Experience";
 
 const EXPLORE = [
   {
-    heading: "my work",
+    heading: "my work.",
     description: "i build stuff, check it out.",
     to: ROUTES.WORK
   },
   {
-    heading: "no other work",
+    heading: "my other work.",
     description: "fun, writing, and some fun writing",
     to: ROUTES.WRITING
   },
   {
-    heading: "me",
+    heading: "me.",
     description: "more about me, if you're interested",
     to: ROUTES.ABOUT
   },
   {
-    heading: "a surprise",
+    heading: "a surprise.",
     description: "fafo",
     to: ROUTES.ABOUT
   }
-  // {
-  //   heading: "my photography",
-  //   description: "foto"
-  // }
 ];
 
 const Home = () => {
@@ -79,7 +75,7 @@ const Home = () => {
       <WorkContainer>
         <Explore
           active={activeHeading !== null}
-          top={activeHeading ? activeHeading * 30 : 0}
+          top={activeHeading ? activeHeading * 50 : 0}
         >
           <Heading3>explore</Heading3>
         </Explore>
@@ -103,7 +99,7 @@ const Home = () => {
         </ExploreHeadingContainer>
         <ExploreDescription
           active={activeHeading !== null}
-          top={activeHeading ? activeHeading * 30 : 0}
+          top={activeHeading ? activeHeading * 50 : 0}
         >
           <Heading3>
             {activeHeading
@@ -180,6 +176,7 @@ const ExploreDescription = styled.div<{ active: boolean; top: number }>`
 `;
 
 const ExploreHeading = styled(Heading3)<{ active: boolean }>`
+  height: 50px;
   margin-right: 10px;
   color: ${(props) => (props.active ? "white" : "gray")};
   cursor: pointer;

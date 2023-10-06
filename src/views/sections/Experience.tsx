@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import EXPERIENCES from "../../copy/experience";
+import { LargeBodyMedium, LargeBody } from "../../styles";
 
 const ExperienceList: React.FC = () => {
   return (
@@ -10,8 +11,8 @@ const ExperienceList: React.FC = () => {
         <Container key={EXPERIENCES.indexOf(experience)}>
           <Logo />
           <div>
-            <div>{experience.company}</div>
-            <div>{experience.position}</div>
+            <LargeBodyMedium>{experience.company}</LargeBodyMedium>
+            <LargeBody>{experience.position}</LargeBody>
           </div>
         </Container>
       ))}
@@ -23,7 +24,7 @@ export default ExperienceList;
 
 const Container = styled.div`
   display: flex;
-  margin-top: 16px;
+  margin-bottom: 16px;
 `;
 
 const Logo = styled.div`

@@ -1,8 +1,8 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { DefaultTheme } from "styled-components";
 
 import { mediaQueries } from "../utils/responsive";
-import { Link } from "react-router-dom";
 
 export const theme: DefaultTheme = {
   colors: {
