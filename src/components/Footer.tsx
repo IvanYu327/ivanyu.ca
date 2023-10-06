@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Footer: React.FC = () => {
   return (
     <Container>
-      <Box>Made with Ivan</Box>
+      <Box>made with ♥ by ivan</Box>
       <SocialsContainer>
         <SocialButton>L</SocialButton>
         <SocialButton>G</SocialButton>
