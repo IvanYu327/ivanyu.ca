@@ -28,10 +28,11 @@ const Navbar: React.FC = () => {
 export default Navbar;
 
 const Container = styled.div`
-  height: 32px;
+  height: 80px;
   border-bottom: 0.5px solid white;
-  margin-top: 48px;
+  padding-top: 48px;
   margin-bottom: 32px;
+  // background: red;
 `;
 
 const NavDirectory = styled.div`

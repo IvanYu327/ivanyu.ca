@@ -38,7 +38,7 @@ export default App;
 
 const AppContainer = styled.div`
   min-height: 100vh;
-  padding: 0 20px 0 20px;
+  padding: 0 40px 0 20px;
   min-width: 400px;
   max-width: 940px;
   margin: 0 auto;

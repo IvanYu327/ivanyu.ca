@@ -23,7 +23,7 @@ const Container = styled.div`
   border-top: 0.5px solid white;
   margin-top: 32px;
   padding-top: 16px;
-  //   background: red;
+  // background: red;
 `;
 
 const Box = styled.div``;

@@ -16,6 +16,7 @@ import {
   LargeBodyBold,
   LargeBodyMedium
 } from "../styles";
+import { getRandomRoute } from "../utils/helper";
 
 import ExperienceList from "./sections/Experience";
 
@@ -38,7 +39,7 @@ const EXPLORE = [
   {
     heading: "a surprise.",
     description: "fafo",
-    to: ROUTES.ABOUT
+    to: getRandomRoute()
   }
 ];
 
