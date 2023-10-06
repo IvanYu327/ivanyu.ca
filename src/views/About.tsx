@@ -31,6 +31,7 @@ const About: React.FC = () => {
       <Body>Body</Body>
       <BodyMedium>BodyMedium</BodyMedium>
       <BodyBold>BodyBold</BodyBold>
+      <br />
       <Caption>Caption</Caption>
     </div>
   );
