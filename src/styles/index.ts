@@ -110,7 +110,7 @@ export const LargeBodyMedium = styled.p`
   margin: 0px;
   font-family: "Inter";
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 600;
 
   // ${mediaQueries.tablet} {
   //   font-size: 16px;
@@ -136,23 +136,24 @@ export const Body = styled.p`
   font-weight: 400;
 `;
 
+export const BodyMedium = styled.p`
+  padding: 0px;
+  margin: 0px;
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 600;
+`;
+
 export const BodyBold = styled.p`
+  padding: 0px;
   margin: 0px;
   font-family: "Inter";
   font-size: 16px;
   font-weight: 700;
-  padding: 0px;
-  margin: 0px;
-`;
-
-export const BodyHeavy = styled.p`
-  margin: 0px;
-  font-family: "Inter";
-  font-size: 16px;
-  font-weight: 400;
 `;
 
 export const Caption = styled.p`
+  padding: 0px;
   margin: 0px;
   font-family: "Inter";
   font-size: 12px;
