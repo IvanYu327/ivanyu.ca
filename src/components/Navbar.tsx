@@ -52,8 +52,3 @@ const NavDirectory = styled.div`
 const NavItem = styled.div`
   display: flex;
 `;
-
-const NavLink = styled.div`
-  color: white;
-  margin: 0 10px;
-`;

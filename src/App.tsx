@@ -7,6 +7,8 @@ import Navbar from "./components/Navbar";
 import { ROUTES } from "./constants/routes";
 import About from "./views/About";
 import Home from "./views/Home";
+import Work from "./views/Work";
+import Writing from "./views/Writing";
 
 const App: React.FC = () => {
   return (
@@ -17,6 +19,8 @@ const App: React.FC = () => {
           <Routes>
             <Route path={ROUTES.MAIN} element={<Home />} />
             <Route path={ROUTES.ABOUT} element={<About />} />
+            <Route path={ROUTES.WORK} element={<Work />} />
+            <Route path={ROUTES.WRITING} element={<Writing />} />
 
             <Route path="*" element={<div>not found</div>} />
           </Routes>
