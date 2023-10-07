@@ -42,6 +42,7 @@ const SocialButton = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
+
   height: 48px;
   width: 48px;
   margin-left: 8px;
@@ -52,7 +53,7 @@ const SocialButton = styled.a`
   text-decoration: none;
 
   &:hover {
-    background: #aaaaaaaa;
+    background: #77777777;
   }
 `;
 
