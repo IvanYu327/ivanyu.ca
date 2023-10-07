@@ -10,7 +10,11 @@ const ExperienceList: React.FC = () => {
       {EXPERIENCES.map((experience) => (
         <Container key={EXPERIENCES.indexOf(experience)}>
           <LightContainer>
-            <LogoContainer color={experience.color}>
+            <LogoContainer
+              color={experience.color}
+              href={experience.link}
+              target="_blank"
+            >
               <Logo src={experience.logo} />
             </LogoContainer>
           </LightContainer>
@@ -45,7 +49,7 @@ const LightContainer = styled.div`
   background: #ffffff;
 `;
 
-const LogoContainer = styled.div<{ color?: string }>`
+const LogoContainer = styled.a<{ color?: string }>`
   height: 64px;
   width: 64px;
 
@@ -57,6 +61,7 @@ const LogoContainer = styled.div<{ color?: string }>`
   opacity: 1;
   transition: background 0.5s ease;
   cursor: pointer;
+  text-decoration: none;
 
   &:hover {
     background: ${(props) => `${props.color}CC`};

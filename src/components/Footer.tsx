@@ -32,10 +32,7 @@ const Container = styled.div`
   border-top: 0.5px solid white;
   margin-top: 32px;
   padding-top: 16px;
-  // background: red;
 `;
-
-const Box = styled.div``;
 
 const SocialsContainer = styled.div`
   display: flex;
@@ -52,7 +49,7 @@ const SocialButton = styled.a`
   border-radius: 50%;
   transition: background 0.5s ease;
   cursor: pointer;
-  text-decoration: none; /* Remove underline for the anchor tag */
+  text-decoration: none;
 
   &:hover {
     background: #aaaaaaaa;

@@ -33,7 +33,7 @@ export const EXPERIENCES: Experience[] = [
     company: "Deep Breathe",
     startYear: 2023,
     endYear: null,
-    link: "",
+    link: "https://www.deepbreathe.ai/",
     logo: DeepBreathe,
     color: "#2B005E"
   },
@@ -42,7 +42,7 @@ export const EXPERIENCES: Experience[] = [
     company: "WatoLink",
     startYear: 2021,
     endYear: 2023,
-    link: "",
+    link: "https://www.watolink.ca/",
     logo: WatoLink,
     color: "#5D7F7F"
   },
@@ -60,7 +60,7 @@ export const EXPERIENCES: Experience[] = [
     company: "iVenuto.com",
     startYear: 2023,
     endYear: 2023,
-    link: "",
+    link: "https://www.ivenuto.com/",
     logo: iVenuto,
     color: "#666666"
   },
@@ -69,7 +69,7 @@ export const EXPERIENCES: Experience[] = [
     company: "Cognixion",
     startYear: 2022,
     endYear: 2022,
-    link: "",
+    link: "https://www.cognixion.com/",
     logo: Cognixion,
     color: "#1D2F2F"
   }
