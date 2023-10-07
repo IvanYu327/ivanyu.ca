@@ -17,7 +17,6 @@ import {
 const About: React.FC = () => {
   return (
     <div>
-      {" "}
       <br />
       <Heading1>Heading 1</Heading1>
       <Heading2>Heading 2</Heading2>

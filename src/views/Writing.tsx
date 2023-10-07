@@ -12,13 +12,14 @@ const Writing: React.FC = () => {
       </Heading3>
       <br />
       <Heading3>
-        I write and create here thinking so that you think I have a personality
-        outside of being a software engineer.
+        I write and create here so that you think I have a personality outside
+        of being a software engineer.
       </Heading3>
       <br />
-      <Heading3>Enjoy.</Heading3>
-      <Heading3>My favourites</Heading3>
-      <Heading3>All</Heading3>
+
+      <SectionHeading>
+        <Heading3>enjoy.</Heading3>
+      </SectionHeading>
     </div>
   );
 };
@@ -26,3 +27,8 @@ const Writing: React.FC = () => {
 export default Writing;
 
 const SectionContainer = styled.div``;
+
+const SectionHeading = styled(Heading3)`
+  margin-top: 16px;
+  border-bottom: 0.5px solid white;
+`;

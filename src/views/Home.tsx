@@ -163,7 +163,7 @@ const ExploreDescription = styled.div<{ active: boolean; top: number }>`
 `;
 
 const ExploreHeading = styled(Heading3)<{ active: boolean }>`
-  height: 50px;
+  min-height: 50px;
   margin-right: 10px;
   color: ${(props) => (props.active ? "white" : "gray")};
   cursor: pointer;
