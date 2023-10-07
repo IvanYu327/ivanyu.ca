@@ -40,7 +40,7 @@ const AppContainer = styled.div`
   min-height: 100vh;
   padding: 0 40px 0 20px;
   min-width: 400px;
-  max-width: 940px;
+  max-width: 740px;
   margin: 0 auto;
   // background: black;
 `;
