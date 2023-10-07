@@ -4,3 +4,7 @@ export { default as WatoLink } from "./logos/WatoLink.png";
 export { default as iVenuto } from "./logos/iVenuto.png";
 export { default as DeepBreathe } from "./logos/DeepBreathe.png";
 export { default as Cognixion } from "./logos/Cognixion.png";
+export { default as Tetrio } from "./logos/tetrio.png";
+
+// Ivan
+export { default as Ivan } from "./ivan.jpg";
