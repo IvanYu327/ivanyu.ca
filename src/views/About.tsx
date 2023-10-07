@@ -21,18 +21,20 @@ const About: React.FC = () => {
     <div>
       <HeroContainer>
         <HeroText>
-          <Heading3>
+          <Heading4>
             I&apos;m a Computer Science student at the University of Waterloo. A
             software engineer constantly exploring and pushing the bounderies of
             tech.
-          </Heading3>
+          </Heading4>
           <br />
-          <Heading3>
-            An avid rock climber, marine organism enthusiast, and Tetris addict.
-          </Heading3>
+          <Heading4>
+            Avid rock climber, marine organism enthusiast, and Tetris addict.
+          </Heading4>
         </HeroText>
         <Image src={Ivan} />
       </HeroContainer>
+      <Heading4>Reading</Heading4>
+      <Heading4>Learning</Heading4>
       <br />
       <Heading1>Heading 1</Heading1>
       <Heading2>Heading 2</Heading2>

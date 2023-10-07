@@ -63,12 +63,12 @@ const SocialButton = styled.a`
 
 const BsLinkedinIcon = styled(BsLinkedin)`
   font-size: 24px;
-  color: white;
+  color: gray;
 `;
 
 const BsGithubIcon = styled(BsGithub)`
   font-size: 24px;
-  color: white;
+  color: gray;
 `;
 
 const TetrioLogo = styled.img`

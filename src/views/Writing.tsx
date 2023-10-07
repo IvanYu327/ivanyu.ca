@@ -25,7 +25,7 @@ const ENTRIES = [
     lastUpdated: "10-07-2023"
   },
   {
-    title: "Typography",
+    title: "Biomedical Engineering to CS",
     created: "10-07-2023",
     lastUpdated: "10-07-2023"
   }
