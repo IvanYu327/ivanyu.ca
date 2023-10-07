@@ -4,4 +4,5 @@ export type Experience = {
   startYear: number;
   endYear: number | null;
   link: string;
+  logo: File | null;
 };
