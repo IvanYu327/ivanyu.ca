@@ -60,15 +60,15 @@ const Home = () => {
     <div>
       <HeroContainer>
         <HeroText>
-          <Heading3>
+          <Heading4>
             I&apos;m a Computer Science student at the University of Waterloo. A
             software engineer constantly exploring and pushing the bounderies of
             tech.
-          </Heading3>
+          </Heading4>
           <br />
-          <Heading3>
+          <Heading4>
             An avid rock climber, marine organism enthusiast, and Tetris addict.
-          </Heading3>
+          </Heading4>
         </HeroText>
         <SpinningThingContainer>shark</SpinningThingContainer>
       </HeroContainer>
@@ -78,7 +78,7 @@ const Home = () => {
           active={activeHeading !== null}
           top={activeHeading ? activeHeading * 50 : 0}
         >
-          <Heading3>explore</Heading3>
+          <Heading4>explore</Heading4>
         </Explore>
         <ExploreHeadingContainer>
           {EXPLORE.map((item) => {
@@ -102,17 +102,17 @@ const Home = () => {
           active={activeHeading !== null}
           top={activeHeading ? activeHeading * 50 : 0}
         >
-          <Heading3>
+          <Heading4>
             {activeHeading
               ? EXPLORE[activeHeading].description
               : EXPLORE[0].description}
-          </Heading3>
+          </Heading4>
         </ExploreDescription>
       </WorkContainer>
 
       <ExperienceContainer>
         <Dummy>
-          <Heading3 style={{ color: "gray" }}>experience </Heading3>
+          <Heading4 style={{ color: "gray" }}>experience </Heading4>
         </Dummy>
         <ExperienceList />
       </ExperienceContainer>
@@ -147,6 +147,7 @@ const WorkContainer = styled.div`
 `;
 
 const Explore = styled.div<{ active: boolean; top: number }>`
+  min-width: 150px;
   width: 150px;
   position: relative;
   top: ${(props) => props.top}px;
@@ -162,7 +163,7 @@ const ExploreDescription = styled.div<{ active: boolean; top: number }>`
   color: ${(props) => (props.active ? "white" : "gray")};
 `;
 
-const ExploreHeading = styled(Heading3)<{ active: boolean }>`
+const ExploreHeading = styled(Heading4)<{ active: boolean }>`
   min-height: 50px;
   margin-right: 10px;
   color: ${(props) => (props.active ? "white" : "gray")};
@@ -171,6 +172,7 @@ const ExploreHeading = styled(Heading3)<{ active: boolean }>`
 `;
 
 const Dummy = styled.div`
+  min-width: 150px;
   width: 150px;
 `;
 

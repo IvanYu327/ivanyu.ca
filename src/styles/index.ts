@@ -168,4 +168,9 @@ export const StyledLink = styled(Link)`
   font-size: 16px;
   font-weight: 400;
   text-decoration: none;
+  transition: color 0.5 ease-in;
+
+  &:hover {
+    color: gray;
+  }
 `;
