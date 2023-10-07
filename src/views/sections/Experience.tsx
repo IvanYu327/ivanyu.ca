@@ -40,9 +40,9 @@ const Container = styled.div`
 const LightContainer = styled.div`
   height: 64px;
   width: 64px;
-  border-radius: 16px;
+  border-radius: 17px;
   margin-right: 16px;
-  background: white;
+  background: #ffffff;
 `;
 
 const LogoContainer = styled.div<{ color?: string }>`
@@ -55,15 +55,16 @@ const LogoContainer = styled.div<{ color?: string }>`
   align-items: center;
   background: ${(props) => props.color};
   opacity: 1;
-  transition: opacity 0.3s ease;
+  transition: background 0.5s ease;
   cursor: pointer;
 
   &:hover {
-    opacity: 85%;
+    background: ${(props) => `${props.color}CC`};
   }
 `;
 
 const Logo = styled.div<{ src: string }>`
+  z-index: 99;
   width: 65%;
   height: 65%;
   background-image: ${(props) => (props.src ? `url("${props.src}")` : "none")};

@@ -26,7 +26,7 @@ export const EXPERIENCES: Experience[] = [
     endYear: null,
     link: "https://hackthenorth.com/",
     logo: HTN2023,
-    color: "#333333"
+    color: "#1D1C2E"
   },
   {
     position: "Software Engineering Intern",
@@ -35,7 +35,7 @@ export const EXPERIENCES: Experience[] = [
     endYear: null,
     link: "",
     logo: DeepBreathe,
-    color: "#333333"
+    color: "#2B005E"
   },
   {
     position: "Software Team Lead",
@@ -44,16 +44,16 @@ export const EXPERIENCES: Experience[] = [
     endYear: 2023,
     link: "",
     logo: WatoLink,
-    color: "#333333"
+    color: "#5D7F7F"
   },
   {
     position: "Frontend Developer",
     company: "Hack the North",
     startYear: 2023,
     endYear: 2023,
-    link: "",
+    link: "https://hackthenorth.com/",
     logo: HTN2023,
-    color: "#333333"
+    color: "#1D1C2E"
   },
   {
     position: "Software Engineering Intern",
@@ -62,7 +62,7 @@ export const EXPERIENCES: Experience[] = [
     endYear: 2023,
     link: "",
     logo: iVenuto,
-    color: "#333333"
+    color: "#666666"
   },
   {
     position: "Software Developer Intern",
