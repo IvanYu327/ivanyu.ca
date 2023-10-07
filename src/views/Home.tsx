@@ -3,19 +3,7 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 import { ROUTES } from "../constants/routes";
-import {
-  Body,
-  BodyBold,
-  BodyMedium,
-  Caption,
-  Heading1,
-  Heading2,
-  Heading3,
-  Heading4,
-  LargeBody,
-  LargeBodyBold,
-  LargeBodyMedium
-} from "../styles";
+import { Heading4 } from "../styles";
 import { getRandomRoute } from "../utils/helper";
 
 import ExperienceList from "./sections/Experience";
