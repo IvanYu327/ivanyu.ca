@@ -9,9 +9,11 @@ const ExperienceList: React.FC = () => {
     <div>
       {EXPERIENCES.map((experience) => (
         <Container key={EXPERIENCES.indexOf(experience)}>
-          <LogoContainer color={experience.color}>
-            <Logo src={experience.logo} />
-          </LogoContainer>
+          <LightContainer>
+            <LogoContainer color={experience.color}>
+              <Logo src={experience.logo} />
+            </LogoContainer>
+          </LightContainer>
           <div>
             <LargeBodyMedium style={{ paddingTop: "6px" }}>
               {experience.company}
@@ -35,15 +37,30 @@ const Container = styled.div`
   min-width: 350px;
 `;
 
+const LightContainer = styled.div`
+  height: 64px;
+  width: 64px;
+  border-radius: 16px;
+  margin-right: 16px;
+  background: white;
+`;
+
 const LogoContainer = styled.div<{ color?: string }>`
   height: 64px;
   width: 64px;
-  margin-right: 16px;
+
   border-radius: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
   background: ${(props) => props.color};
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 85%;
+  }
 `;
 
 const Logo = styled.div<{ src: string }>`
