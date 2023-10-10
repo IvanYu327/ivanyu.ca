@@ -8,11 +8,11 @@ import { Heading4, Body, Caption } from "../styles";
 const Writing: React.FC = () => {
   const navigate = useNavigate();
 
-  return (
-    <Heading4>
-      This is currently a work in progress. Please revisit soon!
-    </Heading4>
-  );
+  // return (
+  //   <Heading4>
+  //     This is currently a work in progress. Please revisit soon!
+  //   </Heading4>
+  // );
 
   return (
     <div>

@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import ScrollToTop from "./components/ScrollToTop";
 import { ROUTES } from "./constants/routes";
+import { WRITING } from "./copy/writing";
 import About from "./views/About";
 import Article from "./views/Article";
 import Home from "./views/Home";
@@ -24,19 +25,14 @@ const App: React.FC = () => {
             <Route path={ROUTES.ABOUT} element={<About />} />
             <Route path={ROUTES.WORK} element={<Work />} />
             <Route path={ROUTES.WRITING} element={<Writing />} />
-            {/*
-              {blogData.map((post) => (
-                <Route
-                  key={post.id}
-                  path={`/blog/${post.id}`}
-                  render={(props) => <BlogPost {...props} post={post} />}
-                />
-              ))}
-              
-              <Route component={NotFound} />
-            */}
-            <Route path={`${ROUTES.WRITING}/*`} element={<Article />} />
-
+            {WRITING.map((item) => (
+              <Route
+                key={item.to}
+                path={`${item.to}`}
+                element={<div>{item.title} </div>}
+              />
+            ))}
+            {/* <Route path={`${ROUTES.WRITING}/*`} element={<Article />} /> */}
             <Route path="*" element={<div>not found</div>} />
           </Routes>
         </ContentContainer>
