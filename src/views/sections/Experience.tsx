@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import EXPERIENCES from "../../copy/experience";
-import { LargeBodyMedium, LargeBody } from "../../styles";
+import { LargeBodyMedium, LargeBody, BodyMedium, Body } from "../../styles";
 
 const ExperienceList: React.FC = () => {
   return (
@@ -19,12 +19,10 @@ const ExperienceList: React.FC = () => {
             </LogoContainer>
           </LightContainer>
           <div>
-            <LargeBodyMedium style={{ paddingTop: "6px" }}>
+            <BodyMedium style={{ paddingTop: "8px" }}>
               {experience.company}
-            </LargeBodyMedium>
-            <LargeBody style={{ marginTop: "4px" }}>
-              {experience.position}
-            </LargeBody>
+            </BodyMedium>
+            <Body style={{ marginTop: "4px" }}>{experience.position}</Body>
           </div>
         </Container>
       ))}

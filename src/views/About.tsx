@@ -22,7 +22,7 @@ const About: React.FC = () => {
       <HeroContainer>
         <HeroText>
           <Heading4>
-            I&apos;m a Computer Science student at the University of Waterloo. A
+            I&apos;m studying Computer Science at the University of Waterloo. A
             software engineer constantly exploring and pushing the bounderies of
             tech.
           </Heading4>

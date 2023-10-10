@@ -1,11 +1,15 @@
+import React, { ReactNode } from "react";
+
 import { ROUTES } from "../constants/routes";
+import BMEtoCS from "../views/writing/BMEtoCS";
+import Blocks from "../views/writing/Blocks";
 
 type Entry = {
   title: string;
   created: string;
   lastUpdated: string;
   to: string;
-  content?: React.FC;
+  content?: ReactNode;
 };
 
 export const WRITING: Entry[] = [
@@ -37,7 +41,8 @@ export const WRITING: Entry[] = [
     title: "Biomedical Engineering to Computer Science",
     created: "10-07-2023",
     lastUpdated: "10-07-2023",
-    to: ""
+    to: "",
+    content: <BMEtoCS />
   },
   {
     title: "colour blind design",
@@ -50,6 +55,13 @@ export const WRITING: Entry[] = [
     created: "10-07-2023",
     lastUpdated: "10-07-2023",
     to: ""
+  },
+  {
+    title: "18.943",
+    created: "10-07-2023",
+    lastUpdated: "10-07-2023",
+    to: "",
+    content: <Blocks />
   }
 ];
 

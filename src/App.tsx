@@ -25,13 +25,17 @@ const App: React.FC = () => {
             <Route path={ROUTES.ABOUT} element={<About />} />
             <Route path={ROUTES.WORK} element={<Work />} />
             <Route path={ROUTES.WRITING} element={<Writing />} />
-            {WRITING.map((item) => (
-              <Route
-                key={item.to}
-                path={`${item.to}`}
-                element={<div>{item.title} </div>}
-              />
-            ))}
+            {WRITING.map((item) => {
+              if (item.content) {
+                return (
+                  <Route
+                    key={item.to}
+                    path={`${item.to}`}
+                    element={item.content}
+                  />
+                );
+              }
+            })}
             {/* <Route path={`${ROUTES.WRITING}/*`} element={<Article />} /> */}
             <Route path="*" element={<div>not found</div>} />
           </Routes>

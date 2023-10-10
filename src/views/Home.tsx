@@ -59,8 +59,8 @@ const Home = () => {
           </Heading4>
           <br />
           <Heading4>
-            Currently building tools @Deep Breathe to help clinicians diagnose
-            lung ultrasounds
+            Currently building AI tools at Deep Breathe to help clinicians
+            diagnose lung ultrasounds
           </Heading4>
         </HeroText>
         {/* <SpinningThingContainer>shark</SpinningThingContainer> */}
