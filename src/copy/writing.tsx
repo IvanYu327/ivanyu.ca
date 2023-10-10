@@ -67,6 +67,6 @@ export const WRITING: Entry[] = [
 
 WRITING.forEach((entry) => {
   // Remove punctuation from entry.title
-  const cleanedTitle = entry.title.replace(/[.,:;'"!?]/g, "").toLowerCase();
+  const cleanedTitle = entry.title.replace(/[,:;'"!?]/g, "").toLowerCase();
   entry.to = ROUTES.WRITING + "/" + cleanedTitle.replace(/ /g, "-");
 });

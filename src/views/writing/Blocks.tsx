@@ -15,8 +15,11 @@ const Blocks: React.FC = () => {
       const timer = setTimeout(
         () => {
           if (keypress.type === "keydown") {
-            // setDisplayText((prevText) => prevText + " " + keypress.data.key);
-            setDisplayText(keypress.data.key);
+            const key = KEYBINDS[keypress.data.key];
+            // const key = keypress.data.key
+
+            setDisplayText((prevText) => prevText + " " + key);
+            // setDisplayText(key);
           }
         },
         ((keypress.frame + keypress.data.subframe) * 1000) / 60
@@ -44,6 +47,17 @@ type Keypress = {
     hoisted?: boolean;
     subframe: number;
   };
+};
+
+const KEYBINDS: Record<string, string> = {
+  moveLeft: "left",
+  moveRight: "right",
+  rotateCW: "up",
+  softDrop: "down",
+  hardDrop: "space",
+  hold: "c",
+  rotateCCW: "x",
+  rotate180: "z"
 };
 
 const KEYPRESS_DATA: Keypress[] = [
