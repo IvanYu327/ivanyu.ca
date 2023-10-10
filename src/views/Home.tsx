@@ -57,8 +57,13 @@ const Home = () => {
           <Heading4>
             An avid rock climber, marine organism enthusiast, and Tetris addict.
           </Heading4>
+          <br />
+          <Heading4>
+            Currently building tools @Deep Breathe to help clinicians diagnose
+            lung ultrasounds
+          </Heading4>
         </HeroText>
-        <SpinningThingContainer>shark</SpinningThingContainer>
+        {/* <SpinningThingContainer>shark</SpinningThingContainer> */}
       </HeroContainer>
 
       <WorkContainer>
