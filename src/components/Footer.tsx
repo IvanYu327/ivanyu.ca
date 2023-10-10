@@ -3,7 +3,7 @@ import { BsLinkedin, BsGithub } from "react-icons/bs";
 import styled from "styled-components";
 
 import { Tetrio } from "../assets/images";
-import { Caption } from "../styles";
+import { Caption, Heading2 } from "../styles";
 
 const Footer: React.FC = () => {
   return (
@@ -21,6 +21,9 @@ const Footer: React.FC = () => {
         </SocialButton>
         <SocialButton href="https://ch.tetr.io/u/weew00" target="_blank">
           <TetrioLogo src={Tetrio} alt="Tetrio logo" />
+        </SocialButton>
+        <SocialButton href="https://twitter.com/weewoo327" target="_blank">
+          <XLogo>𝕏</XLogo>
         </SocialButton>
       </SocialsContainer>
     </Container>
@@ -74,4 +77,9 @@ const BsGithubIcon = styled(BsGithub)`
 const TetrioLogo = styled.img`
   width: 24px;
   height: auto;
+`;
+
+const XLogo = styled(Heading2)`
+  color: gray;
+  font-size: 34px;
 `;
