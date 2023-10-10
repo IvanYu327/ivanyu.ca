@@ -24,6 +24,17 @@ const App: React.FC = () => {
             <Route path={ROUTES.ABOUT} element={<About />} />
             <Route path={ROUTES.WORK} element={<Work />} />
             <Route path={ROUTES.WRITING} element={<Writing />} />
+            {/*
+              {blogData.map((post) => (
+                <Route
+                  key={post.id}
+                  path={`/blog/${post.id}`}
+                  render={(props) => <BlogPost {...props} post={post} />}
+                />
+              ))}
+              
+              <Route component={NotFound} />
+            */}
             <Route path={`${ROUTES.WRITING}/*`} element={<Article />} />
 
             <Route path="*" element={<div>not found</div>} />
