@@ -6,5 +6,8 @@ export { default as DeepBreathe } from "./logos/DeepBreathe.png";
 export { default as Cognixion } from "./logos/Cognixion.png";
 export { default as Tetrio } from "./logos/tetrio.png";
 
+//Projects
+export { default as SSVEP1 } from "./projects/SSVEP1.png";
+
 // Ivan
-export { default as Ivan } from "./ivan.jpg";
+export { default as Ivan } from "./misc/ivan.jpg";

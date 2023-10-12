@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import ScrollToTop from "./components/ScrollToTop";
 import { ROUTES } from "./constants/routes";
+import { PROJECTS } from "./copy/projects";
 import { WRITING } from "./copy/writing";
 import About from "./views/About";
 import Article from "./views/Article";
@@ -24,6 +25,17 @@ const App: React.FC = () => {
             <Route path={ROUTES.MAIN} element={<Home />} />
             <Route path={ROUTES.ABOUT} element={<About />} />
             <Route path={ROUTES.WORK} element={<Work />} />
+            {PROJECTS.map((item) => {
+              if (item.content) {
+                return (
+                  <Route
+                    key={item.to}
+                    path={`${item.to}`}
+                    element={item.content}
+                  />
+                );
+              }
+            })}
             <Route path={ROUTES.WRITING} element={<Writing />} />
             {WRITING.map((item) => {
               if (item.content) {

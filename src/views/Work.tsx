@@ -1,10 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 import { PROJECTS } from "../copy/projects";
 import { Body, BodyBold, Heading4 } from "../styles";
 
 const Work: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <Heading4>
@@ -21,16 +23,30 @@ const Work: React.FC = () => {
 
       <ProjectsContainer>
         {PROJECTS.map((project) => {
-          return (
-            <ProjectItem
-              key={PROJECTS.indexOf(project)}
-              href={project.github}
-              target="__blank"
-            >
-              <BodyBold>{project.name}</BodyBold>
-              <Body style={{ marginTop: "4px" }}>{project.description}</Body>
-            </ProjectItem>
-          );
+          if (project.content) {
+            return (
+              <ProjectItem
+                key={PROJECTS.indexOf(project)}
+                onClick={() => {
+                  navigate(project.to);
+                }}
+              >
+                <BodyBold>{project.name}</BodyBold>
+                <Body style={{ marginTop: "4px" }}>{project.description}</Body>
+              </ProjectItem>
+            );
+          } else {
+            return (
+              <ProjectItem
+                key={PROJECTS.indexOf(project)}
+                href={project.github}
+                target="_blank"
+              >
+                <BodyBold>{project.name}</BodyBold>
+                <Body style={{ marginTop: "4px" }}>{project.description}</Body>
+              </ProjectItem>
+            );
+          }
         })}
       </ProjectsContainer>
     </div>
