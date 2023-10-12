@@ -67,7 +67,6 @@ const AppContainer = styled.div`
   min-width: 400px;
   max-width: 740px;
   margin: 0 auto;
-  // background: black;
 `;
 
 const ContentContainer = styled.div`

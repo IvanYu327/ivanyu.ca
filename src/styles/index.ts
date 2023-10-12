@@ -7,8 +7,8 @@ import { mediaQueries } from "../utils/responsive";
 export const theme: DefaultTheme = {
   colors: {
     background: {
-      dark: "#141425",
-      light: "#29264F"
+      dark: "#0d1117"
+      // light: "#FFFFFF"
     },
     text: {
       dark: {
@@ -50,30 +50,50 @@ export const theme: DefaultTheme = {
 const fontFamily = "Inter";
 
 export const Heading1 = styled.h1`
-  margin: 0px;
   font-family: ${fontFamily};
+  color: ${theme.colors.text.dark.white};
+  margin: 0px;
   font-size: 48px;
   font-weight: 400;
 `;
 
 export const Heading2 = styled.h2`
-  margin: 0px;
   font-family: ${fontFamily};
+  color: ${theme.colors.text.dark.white};
+  margin: 0px;
   font-size: 36px;
   font-weight: 400;
 `;
 
 export const Heading3 = styled.h3`
-  margin: 0px;
   font-family: ${fontFamily};
+  color: ${theme.colors.text.dark.white};
+  margin: 0px;
   font-size: 24px;
   font-weight: 400;
 `;
 
 export const Heading4 = styled.h4`
-  margin: 0px;
   font-family: ${fontFamily};
+  color: ${theme.colors.text.dark.white};
+  margin: 0px;
   font-size: 20px;
+  font-weight: 400;
+`;
+
+export const Heading5 = styled.h5`
+  font-family: ${fontFamily};
+  color: ${theme.colors.text.dark.white};
+  margin: 0px;
+  font-size: 16px;
+  font-weight: 400;
+`;
+
+export const Heading6 = styled.h6`
+  font-family: ${fontFamily};
+  color: ${theme.colors.text.dark.white};
+  margin: 0px;
+  font-size: 12px;
   font-weight: 400;
 `;
 
@@ -82,6 +102,7 @@ export const LargeBody = styled.p`
   font-family: ${fontFamily};
   font-size: 20px;
   font-weight: 400;
+  color: ${theme.colors.text.dark.white};
 `;
 
 export const LargeBodyMedium = styled.p`
@@ -89,6 +110,7 @@ export const LargeBodyMedium = styled.p`
   font-family: ${fontFamily};
   font-size: 20px;
   font-weight: 600;
+  color: ${theme.colors.text.dark.white};
 `;
 
 export const LargeBodyBold = styled.p`
@@ -96,6 +118,7 @@ export const LargeBodyBold = styled.p`
   font-family: ${fontFamily};
   font-size: 20px;
   font-weight: 700;
+  color: ${theme.colors.text.dark.white};
 `;
 
 export const Body = styled.p`
@@ -104,6 +127,7 @@ export const Body = styled.p`
   font-family: ${fontFamily};
   font-size: 16px;
   font-weight: 400;
+  color: ${theme.colors.text.dark.white};
 `;
 
 export const BodyMedium = styled.p`
@@ -112,6 +136,7 @@ export const BodyMedium = styled.p`
   font-family: ${fontFamily};
   font-size: 16px;
   font-weight: 600;
+  color: ${theme.colors.text.dark.white};
 `;
 
 export const BodyBold = styled.p`
@@ -120,6 +145,7 @@ export const BodyBold = styled.p`
   font-family: ${fontFamily};
   font-size: 16px;
   font-weight: 700;
+  color: ${theme.colors.text.dark.white};
 `;
 
 export const Caption = styled.p`
@@ -129,6 +155,7 @@ export const Caption = styled.p`
   font-size: 12px;
   font-weight: 400;
   font-style: italic;
+  color: ${theme.colors.text.dark.white};
 `;
 
 export const StyledLink = styled(Link)`
