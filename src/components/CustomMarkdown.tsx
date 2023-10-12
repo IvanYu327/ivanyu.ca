@@ -1,5 +1,6 @@
 import React from "react";
 import Markdown from "react-markdown";
+// import remarkGfm from "remark-gfm";
 
 import {
   Heading1,
@@ -11,8 +12,13 @@ import {
   Body,
   BodyBold,
   BodyMedium,
-  Caption
+  Caption,
+  ListItem,
+  Hyperlink,
+  OrderedList,
+  UnorderedList
 } from "../styles";
+import Blockquote from "../styles/Blockquote";
 
 interface CustomMarkdownProps {
   markdown: string;
@@ -21,10 +27,10 @@ interface CustomMarkdownProps {
 const CustomMarkdown: React.FC<CustomMarkdownProps> = ({ markdown }) => {
   return (
     <Markdown
+      // remarkPlugins={[remarkGfm]}
       components={{
-        // Map `h1` (`# heading`) to use `h2`s.
-        // a,
-        // blockquote,
+        a: Hyperlink,
+        blockquote: Blockquote,
         // br,
         // code,
         // em,
@@ -36,12 +42,12 @@ const CustomMarkdown: React.FC<CustomMarkdownProps> = ({ markdown }) => {
         h6: Heading6,
         // hr,
         // img,
-        // li: Body,
-        // ol,
+        li: ListItem,
+        ul: UnorderedList,
+        ol: OrderedList,
         p: Body,
         // pre,
         strong: BodyBold
-        // ul,
       }}
     >
       {markdown}

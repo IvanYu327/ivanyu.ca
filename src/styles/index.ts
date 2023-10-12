@@ -7,14 +7,13 @@ import { mediaQueries } from "../utils/responsive";
 export const theme: DefaultTheme = {
   colors: {
     background: {
-      dark: "#0d1117"
-      // light: "#FFFFFF"
+      dark: "#0d1117",
+      light: "#FFFFFF"
     },
     text: {
       dark: {
         white: "#FFFFFFDE",
-        gray: "#FFFFFF99",
-        black: "#FFFFFF61"
+        gray: "#FFFFFF88"
       },
       light: {
         black: "#0D0D0B",
@@ -155,6 +154,42 @@ export const Caption = styled.p`
   font-size: 12px;
   font-weight: 400;
   font-style: italic;
+  color: ${theme.colors.text.dark.white};
+`;
+
+export const Hyperlink = styled.a`
+  font-family: ${fontFamily};
+  color: ${theme.colors.text.dark.white};
+  margin: 0px;
+  font-size: 16px;
+  font-weight: 400;
+  transition: color 0.1s ease-in;
+
+  &:hover {
+    color: ${theme.colors.text.dark.gray};
+  }
+`;
+
+export const ListItem = styled.li`
+  font-family: ${fontFamily};
+  font-size: 16px;
+  font-weight: 400;
+  color: ${theme.colors.text.dark.white};
+`;
+
+export const OrderedList = styled.ol`
+  margin: 0px;
+  font-family: ${fontFamily};
+  font-size: 16px;
+  font-weight: 400;
+  color: ${theme.colors.text.dark.white};
+`;
+
+export const UnorderedList = styled.ul`
+  margin: 0px;
+  font-family: ${fontFamily};
+  font-size: 16px;
+  font-weight: 400;
   color: ${theme.colors.text.dark.white};
 `;
 

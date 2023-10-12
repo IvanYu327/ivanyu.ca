@@ -27,6 +27,12 @@ const markdown = `
 **bold text**
 *italicized text*
 > blockquote
+>
+> blockquote
+> 
+> blockquote
+> 
+> blockquote
 
 1. First item
 2. Second item
@@ -36,13 +42,17 @@ const markdown = `
 - Second item
 - Third item
 
-\`code\`
+\`\`\`ruby
+var add2 = function(number) {
+  return number + 2;
+}
+\`\`\`
 
 Horizontal Line
 
 ---
 
-Link	[title](https://www.example.com)
+Link	[title my g](https://www.example.com)
 
 Image	![alt text](image.jpg)
 
