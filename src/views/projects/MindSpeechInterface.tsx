@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import { SSVEP1 } from "../../assets/images";
 import WhatIDid from "../sections/WhatIDid";
+import { Body } from "../../styles";
 
 const MindSpeechInterface: React.FC = () => {
   return (
@@ -15,6 +16,12 @@ const MindSpeechInterface: React.FC = () => {
         skills={["Team Management", "Biosignal Processing", "UX Design"]}
         tools={["Figma", "Python", "PyQT5", "React", "gtec unicorn"]}
       />
+      <Body style={{ fontStyle: "italic" }}>
+        To preface this project, this interface is a culmination not just my own
+        work, but 40+ students&apos; contributions over the course of 1.5 years.
+      </Body>
+      <br />
+      <Body>{"text ".repeat(1000)}</Body>
     </div>
   );
 };
@@ -22,6 +29,8 @@ const MindSpeechInterface: React.FC = () => {
 export default MindSpeechInterface;
 
 const Image = styled.img`
+  border-radius: 8px;
   width: 100%;
   height: auto;
+  //   box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
 `;
