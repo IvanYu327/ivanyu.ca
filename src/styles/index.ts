@@ -163,10 +163,11 @@ export const Hyperlink = styled.a`
   margin: 0px;
   font-size: 16px;
   font-weight: 400;
-  transition: color 0.1s ease-in;
+  transition: color 0.05s ease-in;
 
   &:hover {
     color: ${theme.colors.text.dark.gray};
+    text-decoration: none;
   }
 `;
 

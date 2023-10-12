@@ -17,7 +17,7 @@ import Writing from "./views/Writing";
 const App: React.FC = () => {
   return (
     <BrowserRouter>
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
       <AppContainer>
         <Navbar />
         <ContentContainer>
