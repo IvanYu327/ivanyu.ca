@@ -4,7 +4,6 @@ import { Body } from "../../styles";
 
 const Blocks: React.FC = () => {
   const [displayText, setDisplayText] = useState<string>("");
-  //   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   useEffect(() => {
     const timers: NodeJS.Timeout[] = [];
