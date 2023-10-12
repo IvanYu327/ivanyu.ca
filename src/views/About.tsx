@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { Ivan } from "../assets/images";
+import CustomMarkdown from "../components/CustomMarkdown";
 import {
   Body,
   BodyBold,
@@ -15,6 +16,37 @@ import {
   LargeBodyBold,
   LargeBodyMedium
 } from "../styles";
+
+const markdown = `
+# Heading1
+## Heading2
+### Heading3
+#### Heading4
+##### Heading5
+###### Heading6
+**bold text**
+*italicized text*
+> blockquote
+
+1. First item
+2. Second item
+3. Third item
+
+- First item
+- Second item
+- Third item
+
+\`code\`
+
+Horizontal Line
+
+---
+
+Link	[title](https://www.example.com)
+
+Image	![alt text](image.jpg)
+
+`;
 
 const About: React.FC = () => {
   return (
@@ -33,6 +65,8 @@ const About: React.FC = () => {
         </HeroText>
         <Image src={Ivan} />
       </HeroContainer>
+      <CustomMarkdown markdown={markdown} />
+      <br />
       <Heading4>Reading</Heading4>
       <Heading4>Learning</Heading4>
       <br />
