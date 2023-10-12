@@ -47,91 +47,61 @@ export const theme: DefaultTheme = {
   }
 };
 
+const fontFamily = "Inter";
+
 export const Heading1 = styled.h1`
   margin: 0px;
-  font-family: "Inter";
+  font-family: ${fontFamily};
   font-size: 48px;
   font-weight: 400;
-
-  // ${mediaQueries.tablet} {
-  //   font-size: 36px;
-  // }
-
-  // ${mediaQueries.largeMobile} {
-  //   font-size: 24px;
-  // }
 `;
 
 export const Heading2 = styled.h2`
   margin: 0px;
-  font-family: "Inter";
+  font-family: ${fontFamily};
   font-size: 36px;
   font-weight: 400;
-
-  // ${mediaQueries.tablet} {
-  //   font-size: 24px;
-  // }
 `;
 
 export const Heading3 = styled.h3`
   margin: 0px;
-  font-family: "Inter";
+  font-family: ${fontFamily};
   font-size: 24px;
   font-weight: 400;
-
-  // ${mediaQueries.tablet} {
-  //   font-size: 20px;
-  // }
 `;
 
 export const Heading4 = styled.h4`
   margin: 0px;
-  font-family: "Inter";
+  font-family: ${fontFamily};
   font-size: 20px;
   font-weight: 400;
-
-  // ${mediaQueries.tablet} {
-  //   font-size: 20px;
-  // }
 `;
 
 export const LargeBody = styled.p`
   margin: 0px;
-  font-family: "Inter";
+  font-family: ${fontFamily};
   font-size: 20px;
   font-weight: 400;
-
-  // ${mediaQueries.tablet} {
-  //   font-size: 16px;
-  // }
 `;
 
 export const LargeBodyMedium = styled.p`
   margin: 0px;
-  font-family: "Inter";
+  font-family: ${fontFamily};
   font-size: 20px;
   font-weight: 600;
-
-  // ${mediaQueries.tablet} {
-  //   font-size: 16px;
-  // }
 `;
 
 export const LargeBodyBold = styled.p`
   margin: 0px;
-  font-family: "Inter";
+  font-family: ${fontFamily};
   font-size: 20px;
   font-weight: 700;
-
-  // ${mediaQueries.tablet} {
-  //   font-size: 16px;
-  // }
 `;
 
 export const Body = styled.p`
   padding: 0px;
   margin: 0px;
-  font-family: "Inter";
+  font-family: ${fontFamily};
   font-size: 16px;
   font-weight: 400;
 `;
@@ -139,7 +109,7 @@ export const Body = styled.p`
 export const BodyMedium = styled.p`
   padding: 0px;
   margin: 0px;
-  font-family: "Inter";
+  font-family: ${fontFamily};
   font-size: 16px;
   font-weight: 600;
 `;
@@ -147,7 +117,7 @@ export const BodyMedium = styled.p`
 export const BodyBold = styled.p`
   padding: 0px;
   margin: 0px;
-  font-family: "Inter";
+  font-family: ${fontFamily};
   font-size: 16px;
   font-weight: 700;
 `;
@@ -155,7 +125,7 @@ export const BodyBold = styled.p`
 export const Caption = styled.p`
   padding: 0px;
   margin: 0px;
-  font-family: "Inter";
+  font-family: ${fontFamily};
   font-size: 12px;
   font-weight: 400;
   font-style: italic;
@@ -164,7 +134,7 @@ export const Caption = styled.p`
 export const StyledLink = styled(Link)`
   margin: 0px;
   color: white;
-  font-family: "Inter";
+  font-family: ${fontFamily};
   font-size: 16px;
   font-weight: 400;
   text-decoration: none;
