@@ -11,6 +11,7 @@ const Blocks: React.FC = () => {
 
     for (let i = 0; i < KEYPRESS_DATA.length; i++) {
       const keypress = KEYPRESS_DATA[i];
+      setDisplayText("");
 
       const timer = setTimeout(
         () => {
@@ -18,7 +19,7 @@ const Blocks: React.FC = () => {
             const key = KEYBINDS[keypress.data.key];
             // const key = keypress.data.key
 
-            setDisplayText((prevText) => prevText + " " + key);
+            setDisplayText((prevText: string) => prevText + " " + key);
             // setDisplayText(key);
           }
         },
@@ -34,7 +35,13 @@ const Blocks: React.FC = () => {
     };
   }, []);
 
-  return <Body>{displayText}</Body>;
+  return (
+    <>
+      <Body>Keystrokes for the 59th fastest tetris player in the world.</Body>
+      <br />
+      <Body>{displayText}</Body>
+    </>
+  );
 };
 
 export default Blocks;

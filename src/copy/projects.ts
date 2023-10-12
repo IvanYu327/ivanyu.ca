@@ -17,7 +17,7 @@ export const PROJECTS: Project[] = [
   {
     name: "Crypto Cupid",
     date: "2023",
-    description: "Verified human web3 dating app.",
+    description: "A decentralized anonymous human to human dating platform",
     github: "https://github.com/IvanYu327/CryptoCupid"
   },
   {
