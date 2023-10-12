@@ -1,9 +1,12 @@
 import React from "react";
+import Markdown from "react-markdown";
 import styled from "styled-components";
 
 import { SSVEP1 } from "../../assets/images";
-import WhatIDid from "../sections/WhatIDid";
 import { Body } from "../../styles";
+import WhatIDid from "../sections/WhatIDid";
+
+const markdown = "# Hi, *Pluto*!";
 
 const MindSpeechInterface: React.FC = () => {
   return (
@@ -16,6 +19,7 @@ const MindSpeechInterface: React.FC = () => {
         skills={["Team Management", "Biosignal Processing", "UX Design"]}
         tools={["Figma", "Python", "PyQT5", "React", "gtec unicorn"]}
       />
+      <Markdown>{markdown}</Markdown>
       <Body style={{ fontStyle: "italic" }}>
         To preface this project, this interface is a culmination not just my own
         work, but 40+ students&apos; contributions over the course of 1.5 years.
