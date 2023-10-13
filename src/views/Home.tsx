@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 import { ROUTES } from "../constants/routes";
-import { Heading4, Hyperlink, LargeBody } from "../styles";
+import { Heading4, Hyperlink, Body, LargeBody, Heading5 } from "../styles";
 import { getRandomRoute } from "../utils/helper";
 
 import ExperienceList from "./sections/Experience";
@@ -48,22 +48,22 @@ const Home = () => {
     <div>
       <HeroContainer>
         <HeroText>
-          <LargeBody>
+          <Body>
             I&apos;m a Computer Science student at the University of Waterloo. A
             software engineer constantly exploring and pushing the bounderies of
             tech.
-          </LargeBody>
+          </Body>
           <br />
-          <LargeBody>
+          <Body>
             An avid rock climber, marine organism enthusiast, and Tetris addict.
-          </LargeBody>
+          </Body>
           <br />
-          <LargeBody>
+          <Body>
             Currently building AI tools at Deep Breathe to help clinicians
             diagnose lung ultrasounds
-          </LargeBody>
+          </Body>
           <br />
-          <LargeBody>
+          <Body>
             Reach me at{" "}
             <Hyperlink
               href="mailto: i7yu@uwaterloo.ca?subject=Hi Ivan!"
@@ -71,7 +71,7 @@ const Home = () => {
             >
               i7yu@uwaterloo.ca
             </Hyperlink>
-          </LargeBody>
+          </Body>
         </HeroText>
         {/* <SpinningThingContainer>shark</SpinningThingContainer> */}
       </HeroContainer>
@@ -79,7 +79,7 @@ const Home = () => {
       <WorkContainer>
         <Explore
           active={activeHeading !== null}
-          top={activeHeading ? activeHeading * 50 : 0}
+          top={activeHeading ? activeHeading * 35 : 0}
         >
           explore
         </Explore>
@@ -103,7 +103,7 @@ const Home = () => {
         </ExploreHeadingContainer>
         <ExploreDescription
           active={activeHeading !== null}
-          top={activeHeading ? activeHeading * 50 : 0}
+          top={activeHeading ? activeHeading * 35 : 0}
         >
           {activeHeading
             ? EXPLORE[activeHeading].description
@@ -113,7 +113,7 @@ const Home = () => {
 
       <ExperienceContainer>
         <Dummy>
-          <Heading4 style={{ color: "gray" }}>experience </Heading4>
+          <Heading5 style={{ margin: "0" }}>experience </Heading5>
         </Dummy>
         <ExperienceList />
       </ExperienceContainer>
@@ -147,8 +147,8 @@ const WorkContainer = styled.div`
   display: flex;
 `;
 
-const Explore = styled(Heading4)<{ active: boolean; top: number }>`
-  min-width: 150px;
+const Explore = styled(Body)<{ active: boolean; top: number }>`
+  min-width: 120px;
   margin: 0;
 
   width: 150px;
@@ -158,7 +158,7 @@ const Explore = styled(Heading4)<{ active: boolean; top: number }>`
   color: ${(props) => (props.active ? "white" : "gray")};
 `;
 
-const ExploreDescription = styled(Heading4)<{ active: boolean; top: number }>`
+const ExploreDescription = styled(Body)<{ active: boolean; top: number }>`
   width: 400px;
   margin: 0;
   position: relative;
@@ -167,8 +167,8 @@ const ExploreDescription = styled(Heading4)<{ active: boolean; top: number }>`
   color: ${(props) => (props.active ? "white" : "gray")};
 `;
 
-const ExploreHeading = styled(Heading4)<{ active: boolean }>`
-  min-height: 50px;
+const ExploreHeading = styled(Body)<{ active: boolean }>`
+  min-height: 35px;
   margin: 0;
   margin-right: 10px;
   color: ${(props) => (props.active ? "white" : "gray")};
@@ -177,8 +177,8 @@ const ExploreHeading = styled(Heading4)<{ active: boolean }>`
 `;
 
 const Dummy = styled.div`
-  min-width: 150px;
-  width: 150px;
+  min-width: 120px;
+  width: 120px;
 `;
 
 const ExperienceContainer = styled.div`

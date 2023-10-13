@@ -3,21 +3,21 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 import { PROJECTS } from "../copy/projects";
-import { Body, BodyBold, Heading4 } from "../styles";
+import { Body, BodyBold, Heading4, LargeBody } from "../styles";
 
 const Work: React.FC = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <Heading4>
+      <LargeBody>
         I&apos;m a builder at heart and love to learn and explore. Here is some
         of the stuff I&apos;ve built.
-      </Heading4>
+      </LargeBody>
       <br />
       {/* <Heading4 style={{ color: "gray" }}>highlights </Heading4>
       <Heading4>Mind Speech SSVEP Interface</Heading4>
       <Heading4>CompuTetris</Heading4> */}
-      <Heading4 style={{ color: "gray" }}>all projects </Heading4>
+      <Heading4>all projects </Heading4>
 
       {/* TODO: add filter someday */}
 

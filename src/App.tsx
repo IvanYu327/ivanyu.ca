@@ -13,11 +13,12 @@ import Article from "./views/Article";
 import Home from "./views/Home";
 import Work from "./views/Work";
 import Writing from "./views/Writing";
+import NotFound from "./views/NotFound";
 
 const App: React.FC = () => {
   return (
     <BrowserRouter>
-      {/* <ScrollToTop /> */}
+      <ScrollToTop />
       <AppContainer>
         <Navbar />
         <ContentContainer>
@@ -49,7 +50,7 @@ const App: React.FC = () => {
               }
             })}
             {/* <Route path={`${ROUTES.WRITING}/*`} element={<Article />} /> */}
-            <Route path="*" element={<div>not found</div>} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </ContentContainer>
 
@@ -64,8 +65,8 @@ export default App;
 const AppContainer = styled.div`
   min-height: 100vh;
   padding: 0 40px 0 20px;
-  min-width: 400px;
-  max-width: 740px;
+  min-width: 300px;
+  max-width: 640px;
   margin: 0 auto;
 `;
 
