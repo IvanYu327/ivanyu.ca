@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 import { ROUTES } from "../constants/routes";
-import { Heading4 } from "../styles";
+import { Heading4, Hyperlink, LargeBody } from "../styles";
 import { getRandomRoute } from "../utils/helper";
 
 import ExperienceList from "./sections/Experience";
@@ -48,20 +48,30 @@ const Home = () => {
     <div>
       <HeroContainer>
         <HeroText>
-          <Heading4>
+          <LargeBody>
             I&apos;m a Computer Science student at the University of Waterloo. A
             software engineer constantly exploring and pushing the bounderies of
             tech.
-          </Heading4>
+          </LargeBody>
           <br />
-          <Heading4>
+          <LargeBody>
             An avid rock climber, marine organism enthusiast, and Tetris addict.
-          </Heading4>
+          </LargeBody>
           <br />
-          <Heading4>
+          <LargeBody>
             Currently building AI tools at Deep Breathe to help clinicians
             diagnose lung ultrasounds
-          </Heading4>
+          </LargeBody>
+          <br />
+          <LargeBody>
+            Reach me at{" "}
+            <Hyperlink
+              href="mailto: i7yu@uwaterloo.ca?subject=Hi Ivan!"
+              target="_blank"
+            >
+              i7yu@uwaterloo.ca
+            </Hyperlink>
+          </LargeBody>
         </HeroText>
         {/* <SpinningThingContainer>shark</SpinningThingContainer> */}
       </HeroContainer>
@@ -71,7 +81,7 @@ const Home = () => {
           active={activeHeading !== null}
           top={activeHeading ? activeHeading * 50 : 0}
         >
-          <Heading4>explore</Heading4>
+          explore
         </Explore>
         <ExploreHeadingContainer>
           {EXPLORE.map((item) => {
@@ -95,11 +105,9 @@ const Home = () => {
           active={activeHeading !== null}
           top={activeHeading ? activeHeading * 50 : 0}
         >
-          <Heading4>
-            {activeHeading
-              ? EXPLORE[activeHeading].description
-              : EXPLORE[0].description}
-          </Heading4>
+          {activeHeading
+            ? EXPLORE[activeHeading].description
+            : EXPLORE[0].description}
         </ExploreDescription>
       </WorkContainer>
 
@@ -139,8 +147,10 @@ const WorkContainer = styled.div`
   display: flex;
 `;
 
-const Explore = styled.div<{ active: boolean; top: number }>`
+const Explore = styled(Heading4)<{ active: boolean; top: number }>`
   min-width: 150px;
+  margin: 0;
+
   width: 150px;
   position: relative;
   top: ${(props) => props.top}px;
@@ -148,8 +158,9 @@ const Explore = styled.div<{ active: boolean; top: number }>`
   color: ${(props) => (props.active ? "white" : "gray")};
 `;
 
-const ExploreDescription = styled.div<{ active: boolean; top: number }>`
+const ExploreDescription = styled(Heading4)<{ active: boolean; top: number }>`
   width: 400px;
+  margin: 0;
   position: relative;
   top: ${(props) => props.top}px;
   transition: all 0.3s ease;
@@ -158,6 +169,7 @@ const ExploreDescription = styled.div<{ active: boolean; top: number }>`
 
 const ExploreHeading = styled(Heading4)<{ active: boolean }>`
   min-height: 50px;
+  margin: 0;
   margin-right: 10px;
   color: ${(props) => (props.active ? "white" : "gray")};
   cursor: pointer;

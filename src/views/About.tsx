@@ -14,6 +14,7 @@ import {
   Heading4,
   Heading5,
   Heading6,
+  Hyperlink,
   LargeBody,
   LargeBodyBold,
   LargeBodyMedium
@@ -77,17 +78,34 @@ const About: React.FC = () => {
         </HeroText>
         <Image src={Ivan} />
       </HeroContainer>
-      <LargeBody>this website. </LargeBody>
-      <LargeBody>Last updated Oct 12, 2023</LargeBody>
+      <Heading5>this website. </Heading5>
+      <Body>Last updated Oct 12, 2023</Body>
+      <br /> <br />
       <Heading5>typography </Heading5>
       <Body>
         Everything is in the system default Inter font right now. Currently
         looking for a fruiter sans serif font.
       </Body>
+      <br /> <br />
       <Heading5>technical</Heading5>
       <Body>
-        Built with React, Typescript, and styled-components. Deployed and hosted
-        on Vercel. Source code available on GitHub.
+        Built with{" "}
+        <Hyperlink href="https://react.dev/" target="_blank">
+          React
+        </Hyperlink>
+        ,{" "}
+        <Hyperlink href="https://www.typescriptlang.org/" target="_blank">
+          Typescript
+        </Hyperlink>
+        , and{" "}
+        <Hyperlink href="https://styled-components.com/" target="_blank">
+          styled-components
+        </Hyperlink>
+        . Deployed and hosted on [????]. Source code available on{" "}
+        <Hyperlink href="https://github.com/IvanYu327/ivanyu.ca" target="blank">
+          Github
+        </Hyperlink>
+        .
       </Body>
       {/* <Heading4>Photography </Heading4>
       <Body>
@@ -97,13 +115,37 @@ const About: React.FC = () => {
         inspiration, it’s not always possible to do so. Credits on most images
         can be found by hovering them.
       </Body> */}
+      <br /> <br />
       <Heading5>inspiration </Heading5>
       <Body>
-        Pages that, in no particular order, inspired the current version of this
-        site — visually, substantially, or personally. cristianzennaro.com
-        franvelas.co antonstallboerger.com alexcarpenter.me bmrks.com sdrn.co
-        id-c.se carlbarenbrug.com studiolenzing.com christopherdoyle.co
-        klim.co.nz chris-wang.com
+        People and pages that inspired the current version of this site —
+        visually, substantially, or personally.
+      </Body>
+      <br />
+      <Body>
+        <Hyperlink href="https://www.wilburzhang.com/" target="blank">
+          wilburzhang.com
+        </Hyperlink>
+      </Body>
+      <Body>
+        <Hyperlink href="https://linusrogge.com/" target="blank">
+          linusrogge.com
+        </Hyperlink>
+      </Body>
+      <Body>
+        <Hyperlink href="https://www.joshlu.me/" target="blank">
+          joshlu.me
+        </Hyperlink>
+      </Body>
+      <Body>
+        <Hyperlink href="https://jennyzhao.webflow.io/" target="blank">
+          jennyzhao.webflow.io
+        </Hyperlink>
+      </Body>
+      <Body>
+        <Hyperlink href="https://kelvinzhang.com/" target="blank">
+          kelvinzhang.com
+        </Hyperlink>
       </Body>
       {/* <Body>good people </Body>
       <Body>

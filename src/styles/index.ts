@@ -161,7 +161,7 @@ export const Hyperlink = styled.a`
   font-family: ${fontFamily};
   color: ${theme.colors.text.dark.white};
   margin: 0px;
-  font-size: 16px;
+  font-size: inherit;
   font-weight: 400;
   transition: color 0.05s ease-in;
 
