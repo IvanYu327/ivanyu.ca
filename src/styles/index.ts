@@ -50,47 +50,47 @@ const fontFamily = "Inter";
 
 export const Heading1 = styled.h1`
   font-family: ${fontFamily};
-  color: ${theme.colors.text.dark.white};
-  margin: 0px;
+  color: ${theme.colors.text.dark.gray};
+  margin: 32px 0;
   font-size: 48px;
   font-weight: 400;
 `;
 
 export const Heading2 = styled.h2`
   font-family: ${fontFamily};
-  color: ${theme.colors.text.dark.white};
-  margin: 0px;
+  color: ${theme.colors.text.dark.gray};
+  margin: 27px 0;
   font-size: 36px;
   font-weight: 400;
 `;
 
 export const Heading3 = styled.h3`
   font-family: ${fontFamily};
-  color: ${theme.colors.text.dark.white};
-  margin: 0px;
+  color: ${theme.colors.text.dark.gray};
+  margin: 18px 0;
   font-size: 24px;
   font-weight: 400;
 `;
 
 export const Heading4 = styled.h4`
   font-family: ${fontFamily};
-  color: ${theme.colors.text.dark.white};
-  margin: 0px;
+  color: ${theme.colors.text.dark.gray};
+  margin: 15px 0;
   font-size: 20px;
   font-weight: 400;
 `;
 
 export const Heading5 = styled.h5`
   font-family: ${fontFamily};
-  color: ${theme.colors.text.dark.white};
-  margin: 0px;
+  color: ${theme.colors.text.dark.gray};
+  margin: 12px 0;
   font-size: 16px;
   font-weight: 400;
 `;
 
 export const Heading6 = styled.h6`
   font-family: ${fontFamily};
-  color: ${theme.colors.text.dark.white};
+  color: ${theme.colors.text.dark.gray};
   margin: 0px;
   font-size: 12px;
   font-weight: 400;
