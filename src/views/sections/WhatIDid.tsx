@@ -20,7 +20,7 @@ const WhatIDid: React.FC<WhatIDidProps> = ({
 }) => {
   return (
     <Container>
-      <Heading4 style={{ color: "gray" }}>what i did</Heading4>
+      <Heading4 style={{ color: "gray" }}>Details</Heading4>
       <ColumnContainer>
         <Column>
           {position && (

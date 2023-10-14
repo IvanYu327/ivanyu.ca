@@ -35,11 +35,11 @@ const Image = styled.img`
 const markdown = `
 #### key learnings
 
-Start small with an MVP. We encounterd a lot of issues regardling inter-stimuli interference starting our data collection, having started with a interface that had 16 simultaneous stimuli. We had to reduce the number of stimuli to 8, and even then we had to implement a lot of filtering and artifact removal to get clean data.
+Start small with an MVP. I encounterd a lot of issues regardling inter-stimuli interference starting our data collection, having started with a interface that had 16 simultaneous stimuli. I had to reduce the number of stimuli to 8, and even then I had to implement a lot of filtering and artifact removal to get clean data.
 
 &nbsp;
 
-On the main interface, we started with desgining with 12 stimuli, but we had to reduce it to 8 to make it more usable. We also had to implement a lot of filtering and artifact removal to get clean data.
+On the main interface, the original design had 12 stimuli, but it had to be reduced it to 8 to make it more usable. 
 
 #### want to learn more?
 
@@ -53,6 +53,6 @@ Check out:
 
 - [2022 NeuroTechX Student Club Competition Winners](https://openbci.com/community/2022-neurotechx-student-club-competition-winners/)
 
-- Wearable Brain-Computer Interface Paired with Large Language Model for Fast Speech Communication
+- [Wearable Brain-Computer Interface Paired with Large Language Model for Fast Speech Communication]()
 
 `;

@@ -3,9 +3,19 @@ import ReactDOM from "react-dom/client";
 import { createGlobalStyle, css, ThemeProvider } from "styled-components";
 
 import App from "./App";
+import { SpaceGroteskRegular } from "./assets/fonts";
 import { theme } from "./styles";
 
 const fonts = css`
+  @font-face {
+    font-family: "SpaceGrotesk";
+    font-style: normal;
+    font-weight: 400;
+    src:
+      url(${SpaceGroteskRegular}) format("truetype"),
+    font-display: swap;
+  }
+
   @font-face {
     font-family: "Castledown";
     src: url("/fonts/castledown-heavy.eot");
@@ -16,33 +26,6 @@ const fonts = css`
       url("/fonts/castledown-heavy.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Satoshi";
-    font-style: normal;
-    font-weight: 400;
-    src:
-      url("/fonts/Satoshi-Regular.woff2") format("woff2"),
-      url("/fonts/Satoshi-Regular.woff") format("woff");
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Satoshi";
-    font-style: normal;
-    font-weight: 500;
-    src:
-      url("/fonts/Satoshi-Medium.woff2") format("woff2"),
-      url("/fonts/Satoshi-Medium.woff") format("woff");
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Satoshi";
-    font-style: normal;
-    font-weight: 700;
-    src:
-      url("/fonts/Satoshi-Bold.woff2") format("woff2"),
-      url("/fonts/Satoshi-Bold.woff") format("woff");
     font-display: swap;
   }
 `;

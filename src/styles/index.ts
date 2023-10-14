@@ -46,7 +46,7 @@ export const theme: DefaultTheme = {
   }
 };
 
-const fontFamily = "Inter";
+const fontFamily = '"SpaceGrotesk", sans-serif';
 
 export const Heading1 = styled.h1`
   font-family: ${fontFamily};
