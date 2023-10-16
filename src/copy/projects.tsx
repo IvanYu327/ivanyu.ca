@@ -59,7 +59,7 @@ export const PROJECTS: Project[] = [
   {
     name: "Spog",
     date: "2021",
-    description: "Functional Lego replica of Boston Dynamic's Spot the Dog.",
+    description: "Functional Lego replica of Boston Dynamic's Spot.",
     github: "https://github.com/IvanYu327/spog-the-dog",
     to: ""
   },
