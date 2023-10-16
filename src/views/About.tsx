@@ -78,8 +78,11 @@ const About: React.FC = () => {
         </HeroText>
         <Image src={Ivan} />
       </HeroContainer>
-      <Heading5>this website. </Heading5>
-      <Body>Last updated Oct 12, 2023</Body>
+      <br /> <br />
+      <SpaceBetween>
+        <Heading5>this website</Heading5>
+        <Body>last updated Oct 12, 2023</Body>
+      </SpaceBetween>
       <br /> <br />
       <Heading5>typography </Heading5>
       <Body>
@@ -101,7 +104,11 @@ const About: React.FC = () => {
         <Hyperlink href="https://styled-components.com/" target="_blank">
           styled-components
         </Hyperlink>
-        . Deployed and hosted on [????]. Source code available on{" "}
+        . Deployed and hosted on{" "}
+        <Hyperlink href="https://vercel.com/" target="_blank">
+          Vercel
+        </Hyperlink>
+        . Source code available on{" "}
         <Hyperlink href="https://github.com/IvanYu327/ivanyu.ca" target="blank">
           Github
         </Hyperlink>
@@ -195,4 +202,9 @@ const Image = styled.div<{ src: string }>`
   background-image: ${(props) => (props.src ? `url("${props.src}")` : "none")};
   background-size: cover;
   flex: 0 0 auto;
+`;
+
+const SpaceBetween = styled.div`
+  display: flex;
+  justify-content: space-between;
 `;
