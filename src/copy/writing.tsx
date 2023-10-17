@@ -3,6 +3,7 @@ import React, { ReactNode } from "react";
 import { ROUTES } from "../constants/routes";
 import BMEtoCS from "../views/writing/BMEtoCS";
 import Blocks from "../views/writing/Blocks";
+import WebsiteDysmorphia from "../views/writing/WebsiteDysmorphia";
 
 type Entry = {
   title: string;
@@ -45,10 +46,11 @@ export const WRITING: Entry[] = [
     content: <BMEtoCS />
   },
   {
-    title: "colour blind design",
+    title: "website dysmorphia",
     created: "10-07-2023",
     lastUpdated: "10-07-2023",
-    to: ""
+    to: "",
+    content: <WebsiteDysmorphia />
   },
   {
     title: "word of the day",

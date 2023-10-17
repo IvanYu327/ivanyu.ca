@@ -124,6 +124,7 @@ export const Body = styled.p`
   padding: 0px;
   margin: 0px;
   margin-top: 8px;
+  line-height: 1.5;
   font-family: ${fontFamily};
   font-size: 16px;
   font-weight: 400;

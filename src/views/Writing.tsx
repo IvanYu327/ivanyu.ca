@@ -3,32 +3,32 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 import { WRITING } from "../copy/writing";
-import { Heading4, Body, Caption } from "../styles";
+import { Heading4, Body, LargeBody, Caption } from "../styles";
 
 const Writing: React.FC = () => {
   const navigate = useNavigate();
 
-  return (
-    <Heading4>
-      This is currently a work in progress as I edit my writing. Please revisit
-      soon!
-    </Heading4>
-  );
+  // return (
+  //   <Heading4>
+  //     This is currently a work in progress as I edit my writing. Please revisit
+  //     soon!
+  //   </Heading4>
+  // );
 
   return (
     <div>
-      <Heading4>
+      <LargeBody>
         I write and create here so that you may see that I have a personality
         outside of being a software engineer
-      </Heading4>
+      </LargeBody>
       <br />
-      <Heading4>
+      <LargeBody>
         Maybe you&apos;ll find me more interesting or hire me for the that.
-      </Heading4>
+      </LargeBody>
       <br />
-      <Heading4>Or not and you learn something new.</Heading4>
+      <LargeBody>Or not and you learn something new.</LargeBody>
       <br />
-      <Heading4>Or worst case you hate fish.</Heading4>
+      <LargeBody>Or worst case you hate fish.</LargeBody>
       <br />
       <Body>enjoy.</Body>
 
@@ -38,17 +38,19 @@ const Writing: React.FC = () => {
 
       <Line />
       {WRITING.map((entry) => {
-        return (
-          <EntryContainer
-            key={WRITING.indexOf(entry)}
-            onClick={() => {
-              navigate(entry.to);
-            }}
-          >
-            <Body>{entry.title}</Body>
-            <Caption>{entry.lastUpdated}</Caption>
-          </EntryContainer>
-        );
+        if (entry.content) {
+          return (
+            <EntryContainer
+              key={WRITING.indexOf(entry)}
+              onClick={() => {
+                navigate(entry.to);
+              }}
+            >
+              <Body>{entry.title}</Body>
+              <Caption>{entry.lastUpdated}</Caption>
+            </EntryContainer>
+          );
+        }
       })}
       <div style={{ height: "100px" }} />
     </div>

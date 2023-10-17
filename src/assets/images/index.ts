@@ -1,5 +1,3 @@
-import { from } from "@apollo/client";
-
 // Logos
 export { default as HTN2023 } from "./logos/HTN2023.png";
 export { default as WatoLink } from "./logos/WatoLink.png";
