@@ -4,7 +4,7 @@ import CustomMarkdown from "../../components/CustomMarkdown";
 const markdown = `
 # website dysmorphia
 
-A rant on my struggles with designing this website.
+A rant on my perfectionist struggle with designing this website.
 
 &nbsp;
 
@@ -30,7 +30,11 @@ what about 8px?
 
 No, it still looks off?
 
+&nbsp;
+
 Building a website off a given design is easy, just copy the styles on Figma, do exactly what the designers want. But suddenly I want my own website, and I can't decide what font, color, spacing, format, navigation, or anything to use. Three days later and all I have is a \`<div/>\` and lorem ipsum that I call a hero section.
+
+&nbsp;
 
 I've studied human factors, biomedical design, human computer interaction, and did art for most of my early school life, but making things look good is hard. I want my website to embody that, to be a pleasant and perfect experience for every user to learn more about my work and my life. But I'm not sure how.
 
@@ -46,11 +50,21 @@ I finally settle on what you are seeing right now. Keep it simple, “minimalist
 
 Is that it? Am I finished my website once and for all? Is this 3rd time the charm? Or will I see other websites and their snazzy clean designs, end up disliking this one the longer I stare at it, and start over all again?
 
+&nbsp;
+
 Maybe its a bias because I've spent all this time building these pages, staring at them, adjusting them. Like how elite bodybuilders still edit their Instagram posts to make themselves look better despite being in the top 0.01% of human physiques.
+
+&nbsp;
 
 Maybe I'm just overthinking it and nobody will see this site.
 
+&nbsp;
+
 Maybe other people visit this page and think "damn this personal site is perfect, he's such a great engineer and an interesting person".
+
+&nbsp;
+
+Or maybe I'm meant to redo my site every once in a while, change up the style, like a wardrobe change.
 
 &nbsp;
 
