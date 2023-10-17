@@ -33,13 +33,19 @@ const Image = styled.img`
 `;
 
 const markdown = `
+#### results
+
+First place - NeurotechX 2022
+
+Best Demo - Canadian Undergraduate Conference for AI
+
 #### key learnings
 
 Start small with an MVP. I encounterd a lot of issues regardling inter-stimuli interference starting our data collection, having started with a interface that had 16 simultaneous stimuli. I had to reduce the number of stimuli to 8, and even then I had to implement a lot of filtering and artifact removal to get clean data.
 
 &nbsp;
 
-On the main interface, the original design had 12 stimuli, but it had to be reduced it to 8 to make it more usable. 
+On the main interface, the original design had 12 stimuli, but it had to be reduced it to 8 to make it more usable. Even though the theoretical limit should have been able to work with 12 or 16 stimuli, we had to recognize that we were also bound by the limitations of our hardware and our lack of a fully controlled environment.
 
 #### want to learn more?
 

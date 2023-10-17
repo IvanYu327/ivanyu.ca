@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
         {pathSegments.map((segment, index) => {
           return (
             <NavItem key={index}>
-              <Body>&nbsp;&nbsp;/&nbsp;&nbsp;</Body>
+              <Body style={{ margin: 0 }}>&nbsp;&nbsp;/&nbsp;&nbsp;</Body>
               <StyledLink to={`/${pathSegments.slice(0, index + 1).join("/")}`}>
                 {segment}
               </StyledLink>

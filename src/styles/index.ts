@@ -123,6 +123,7 @@ export const LargeBodyBold = styled.p`
 export const Body = styled.p`
   padding: 0px;
   margin: 0px;
+  margin-top: 8px;
   font-family: ${fontFamily};
   font-size: 16px;
   font-weight: 400;

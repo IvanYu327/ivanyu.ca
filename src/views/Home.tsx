@@ -60,7 +60,7 @@ const Home = () => {
           <br />
           <Body>
             Currently building AI tools at Deep Breathe to help clinicians
-            diagnose lung ultrasounds
+            diagnose lung ultrasounds.
           </Body>
           <br />
           <Body>
@@ -71,6 +71,7 @@ const Home = () => {
             >
               i7yu@uwaterloo.ca
             </Hyperlink>
+            .
           </Body>
         </HeroText>
         {/* <SpinningThingContainer>shark</SpinningThingContainer> */}

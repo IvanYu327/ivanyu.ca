@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 
 import { ROUTES } from "../constants/routes";
-import MindSpeechInterface from "../views/projects/MindSpeechInterface";
+import { BuildABoty, MindSpeechInterface } from "../views/projects";
 
 type Project = {
   name: string;
@@ -68,7 +68,8 @@ export const PROJECTS: Project[] = [
     date: "2021",
     description: "Fitness planner Discord bot.",
     github: "https://github.com/IvanYu327/Build-a-Bot-y_EngHackQuests21",
-    to: ""
+    to: "",
+    content: <BuildABoty />
   }
 ];
 
