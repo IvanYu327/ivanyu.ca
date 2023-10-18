@@ -43,8 +43,7 @@ const NavDirectory = styled.div`
 
 const NavItem = styled.div`
   display: flex;
-  white-space: nowrap; /* Prevent text from wrapping */
   overflow: hidden;
-  text-overflow: ellipsis; /* Display ellipsis (...) when text overflows */
-  // max-width: 150px; /* Truncate if text exceeds 100px in width */
+  white-space: nowrap;
+  text-overflow: ellipsis;
 `;

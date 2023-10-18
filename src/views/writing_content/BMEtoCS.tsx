@@ -41,7 +41,7 @@ And on the plus side, I now have space to take ceramics and fine arts courses, w
 
 &nbsp;
 
-Hopefully this somewhat answers those questions. If not, I hope it encourages you to try new things and take risks. You never know what you'll find.
+Hopefully this somewhat answers those questions. If not, I hope it encourages you to try new things and take risks.
 `;
 
 const BMEtoCS = () => {

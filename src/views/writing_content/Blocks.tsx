@@ -36,7 +36,7 @@ const Blocks: React.FC = () => {
 
   return (
     <>
-      <Heading1>Blocks</Heading1>
+      <Heading1>Fast blocks</Heading1>
       <Body>
         Keystrokes for the 59th fastest tetris player in the world. Follow along
         ;)

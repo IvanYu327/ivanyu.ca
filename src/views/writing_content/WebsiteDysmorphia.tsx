@@ -2,7 +2,7 @@ import React from "react";
 import CustomMarkdown from "../../components/CustomMarkdown";
 
 const markdown = `
-# website dysmorphia
+# Website dysmorphia
 
 A little rant on my perfectionist struggle with balancing time and design of this website.
 

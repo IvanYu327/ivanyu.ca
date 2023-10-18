@@ -1,9 +1,7 @@
 import React, { ReactNode } from "react";
 
 import { ROUTES } from "../constants/routes";
-import BMEtoCS from "../views/writing/BMEtoCS";
-import Blocks from "../views/writing/Blocks";
-import WebsiteDysmorphia from "../views/writing/WebsiteDysmorphia";
+import { BMEtoCS, WebsiteDysmorphia, Blocks } from "../views/writing_content";
 
 type Entry = {
   title: string;
@@ -39,16 +37,16 @@ export const WRITING: Entry[] = [
     to: ""
   },
   {
-    title: "Biomedical Engineering to Computer Science",
+    title: "Biomedical Engineering to Computer Science. Why?",
     created: "10-07-2023",
-    lastUpdated: "10-07-2023",
+    lastUpdated: "10-17-2023",
     to: "",
     content: <BMEtoCS />
   },
   {
-    title: "website dysmorphia",
+    title: "Website dysmorphia",
     created: "10-07-2023",
-    lastUpdated: "10-07-2023",
+    lastUpdated: "10-17-2023",
     to: "",
     content: <WebsiteDysmorphia />
   },
@@ -59,7 +57,7 @@ export const WRITING: Entry[] = [
     to: ""
   },
   {
-    title: "18.943",
+    title: "Fast blocks",
     created: "10-07-2023",
     lastUpdated: "10-07-2023",
     to: "",
@@ -69,6 +67,6 @@ export const WRITING: Entry[] = [
 
 WRITING.forEach((entry) => {
   // Remove punctuation from entry.title
-  const cleanedTitle = entry.title.replace(/[,:;'"!?]/g, "").toLowerCase();
+  const cleanedTitle = entry.title.replace(/[.,:;'"!?]/g, "").toLowerCase();
   entry.to = ROUTES.WRITING + "/" + cleanedTitle.replace(/ /g, "-");
 });
