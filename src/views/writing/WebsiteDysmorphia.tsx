@@ -4,7 +4,7 @@ import CustomMarkdown from "../../components/CustomMarkdown";
 const markdown = `
 # website dysmorphia
 
-A rant on my perfectionist struggle with designing this website.
+A little rant on my perfectionist struggle with balancing time and design of this website.
 
 &nbsp;
 
@@ -40,11 +40,11 @@ I've studied human factors, biomedical design, human computer interaction, and d
 
 &nbsp;
 
-It doesn't help that I'm mildy red-green colour blind (deuteranopia). My perception of color is and will always be skewed. At least with development, I have numbers assigned to colors, but picking a colour palette will always be difficult. Does it even look good? I think it looks good but do I trust what I see? 
+It doesn't help that I'm red-green colour vision deficient (deuteranopia). My perception of color is and will always be skewed. At least with development, I have numbers assigned to colors, but picking a colour palette will always be difficult. Does it even look good? I think it looks good but do I trust what I see? 
 
 &nbsp;
 
-I finally settle on what you are seeing right now. Keep it simple, “minimalist”, a “less is more” kinda vibe. Grayscale to reduce the decisions and second guessing I need to make. I know I need make design choices and deploy this site, so that I can work on other projects or apply to jobs. It's just a portfolio after all, it doesn't need to be perfect, just good enough. 
+I finally settle on what you are seeing right now. Keep it simple, “minimalist”, a “less is more” kinda vibe. Grayscale to reduce the decisions and second guessing I need to make. I know I need make design choices and deploy this site, so that I can work on other projects or apply to jobs. I tell myself it's just a portfolio after all, it doesn't need to be perfect, just good enough. 
 
 &nbsp;
 
@@ -60,7 +60,7 @@ Maybe I'm just overthinking it and nobody will see this site.
 
 &nbsp;
 
-Maybe other people visit this page and think "damn this personal site is perfect, he's such a great engineer and an interesting person".
+Maybe other people visit this page and think "damn this such an elegant personal site, what an interesting person" like I do when I see other portfolios.
 
 &nbsp;
 
