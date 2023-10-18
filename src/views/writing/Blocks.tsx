@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { Body } from "../../styles";
+import { Body, Caption, Heading1, Hyperlink } from "../../styles";
 
 const Blocks: React.FC = () => {
   const [displayText, setDisplayText] = useState<string>("");
@@ -36,8 +36,20 @@ const Blocks: React.FC = () => {
 
   return (
     <>
-      <Body>Keystrokes for the 59th fastest tetris player in the world.</Body>
+      <Heading1>Blocks</Heading1>
+      <Body>
+        Keystrokes for the 59th fastest tetris player in the world. Follow along
+        ;)
+      </Body>
       <br />
+      <Body>40 lines cleared</Body>
+      <Body>18.943 seconds</Body>
+      <Body>5.33 pieces per second</Body>
+      <Body>306 keys pressed</Body>
+      <br />
+      <Hyperlink href="https://tetr.io/#R:BVKu0jX_i" target="_blank">
+        Check out the full replay
+      </Hyperlink>
       <Body>{displayText}</Body>
     </>
   );
