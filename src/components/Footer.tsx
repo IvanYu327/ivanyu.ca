@@ -50,8 +50,8 @@ const SocialButton = styled.a`
   align-items: center;
   justify-content: center;
 
-  height: 48px;
-  width: 48px;
+  height: 32px;
+  width: 32px;
   margin-left: 8px;
   background: none;
   border-radius: 50%;
@@ -65,21 +65,21 @@ const SocialButton = styled.a`
 `;
 
 const BsLinkedinIcon = styled(BsLinkedin)`
-  font-size: 24px;
+  font-size: 16px;
   color: gray;
 `;
 
 const BsGithubIcon = styled(BsGithub)`
-  font-size: 24px;
+  font-size: 16px;
   color: gray;
 `;
 
 const TetrioLogo = styled.img`
-  width: 24px;
+  width: 16px;
   height: auto;
 `;
 
 const XLogo = styled(Heading2)`
   color: gray;
-  font-size: 32px;
+  font-size: 24px;
 `;
