@@ -8,12 +8,12 @@ import { Heading4, Body, LargeBody, Caption } from "../styles";
 const Writing: React.FC = () => {
   const navigate = useNavigate();
 
-  // return (
-  //   <Heading4>
-  //     This is currently a work in progress as I edit my writing. Please revisit
-  //     soon!
-  //   </Heading4>
-  // );
+  return (
+    <Heading4>
+      This is currently a work in progress as I edit my writing. Please revisit
+      soon!
+    </Heading4>
+  );
 
   return (
     <div>
