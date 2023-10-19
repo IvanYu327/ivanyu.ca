@@ -81,5 +81,5 @@ const TetrioLogo = styled.img`
 
 const XLogo = styled(Heading2)`
   color: gray;
-  font-size: 24px;
+  font-size: 20px;
 `;
