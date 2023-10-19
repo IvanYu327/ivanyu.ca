@@ -8,7 +8,7 @@ import { Caption, Heading2 } from "../styles";
 const Footer: React.FC = () => {
   return (
     <Container>
-      <Caption>made with ♥</Caption>
+      <Caption>made by and about ivan yu</Caption>
       <SocialsContainer>
         <SocialButton
           href="https://www.linkedin.com/in/ivanyu327/"
