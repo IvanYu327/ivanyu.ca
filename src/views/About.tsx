@@ -20,47 +20,6 @@ import {
   LargeBodyMedium
 } from "../styles";
 
-const markdown = `
-# Heading1
-## Heading2
-### Heading3
-#### Heading4
-##### Heading5
-###### Heading6
-**bold text**
-*italicized text*
-> blockquote
->
-> blockquote
-> 
-> blockquote
-> 
-> blockquote
-
-1. First item
-2. Second item
-3. Third item
-
-- First item
-- Second item
-- Third item
-
-\`\`\`ruby
-var add2 = function(number) {
-  return number + 2;
-}
-\`\`\`
-
-Horizontal Line
-
----
-
-Link	[title my g](https://www.example.com)
-
-Image	![alt text](image.jpg)
-
-`;
-
 const About: React.FC = () => {
   return (
     <div>
@@ -163,25 +122,6 @@ const About: React.FC = () => {
         Florian Kiem Nils Eller Raphael Volpert Valentin Rudloff Sam di Mauro
         Piet Terheyden
       </Body> */}
-      <CustomMarkdown markdown={markdown} />
-      <br />
-      <Heading4>Reading</Heading4>
-      <Heading4>Learning</Heading4>
-      <br />
-      <Heading1>Heading 1</Heading1>
-      <Heading2>Heading 2</Heading2>
-      <Heading3>Heading 3</Heading3>
-      <Heading4>Heading 4</Heading4>
-      <br />
-      <LargeBody>LargeBody</LargeBody>
-      <LargeBodyMedium>LargeBodyMedium</LargeBodyMedium>
-      <LargeBodyBold>LargeBodyBold</LargeBodyBold>
-      <br />
-      <Body>Body</Body>
-      <BodyMedium>BodyMedium</BodyMedium>
-      <BodyBold>BodyBold</BodyBold>
-      <br />
-      <Caption>Caption</Caption>
     </div>
   );
 };
