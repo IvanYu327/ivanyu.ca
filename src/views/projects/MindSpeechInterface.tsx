@@ -20,7 +20,14 @@ const MindSpeechInterface: React.FC = () => {
         timeline="2021 - 2023"
         teamSize="45"
         skills={["Team Management", "Biosignal Processing", "UX Design"]}
-        tools={["Figma", "Python", "PyQT5", "React", "gtec unicorn"]}
+        tools={[
+          "Figma",
+          "Python",
+          "PyQT5",
+          "React",
+          "web sockets",
+          "gtec unicorn"
+        ]}
       />
       <CustomMarkdown markdown={markdown} />
     </div>
