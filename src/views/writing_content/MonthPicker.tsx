@@ -8,8 +8,8 @@ interface Day {
 }
 
 interface MonthPickerProps {
-  year: number;
-  month: number;
+  startYear: number;
+  startMonth: number;
 }
 
 const Container = styled.div`
@@ -46,7 +46,6 @@ const DaysContainer = styled.div`
 const DaySquare = styled.div`
   width: 50px;
   height: 50px;
-  background-color: lightblue;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,7 +62,7 @@ const DaySquare = styled.div`
   }
 `;
 
-const MonthPicker: React.FC<MonthPickerProps> = ({ year, month }) => {
+const MonthPicker: React.FC<MonthPickerProps> = ({ startYear, startMonth }) => {
   const [selectedDate, setSelectedDate] = useState<Day | null>(null);
 
   const handleDayClick = (dayData: Day) => {
@@ -97,8 +96,54 @@ const MonthPicker: React.FC<MonthPickerProps> = ({ year, month }) => {
     return monthDays;
   };
 
-  const monthDays = generateMonthDays(year, month);
-  console.log(monthDays);
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear();
+  const currentMonth = currentDate.getMonth();
+
+  const allMonths: JSX.Element[] = [];
+
+  for (let year = startYear; year <= currentYear; year++) {
+    for (let month = 0; month < 12; month++) {
+      if (
+        (year === startYear && month < startMonth) ||
+        (year === currentYear && month > currentMonth)
+      ) {
+        continue;
+      }
+
+      const monthDays = generateMonthDays(year, month);
+
+      allMonths.push(
+        <div key={`${year}-${month}`}>
+          <Heading>
+            {new Date(year, month).toLocaleString("default", {
+              month: "long",
+              year: "numeric"
+            })}
+          </Heading>
+          <DaysContainer>
+            {monthDays.map((week, weekIndex) => (
+              <React.Fragment key={weekIndex}>
+                {week.map((dayData, dayIndex) =>
+                  dayData.date === null ? (
+                    <DaySquare key={dayIndex} />
+                  ) : (
+                    <DaySquare
+                      key={dayIndex}
+                      onClick={() => handleDayClick(dayData)}
+                    >
+                      <div>{dayData.day}</div>
+                      <img src={dayData.image} alt={`Day ${dayData.day}`} />
+                    </DaySquare>
+                  )
+                )}
+              </React.Fragment>
+            ))}
+          </DaysContainer>
+        </div>
+      );
+    }
+  }
 
   return (
     <Container>
@@ -106,37 +151,13 @@ const MonthPicker: React.FC<MonthPickerProps> = ({ year, month }) => {
         {selectedDate && (
           <div>
             <img src={selectedDate.image} alt={`Day ${selectedDate.day}`} />
-            <p>{selectedDate.date.toDateString()}</p>
+            <p>
+              {selectedDate.date ? selectedDate.date.toDateString() : "no date"}
+            </p>
           </div>
         )}
       </SelectedDate>
-      <MonthPickerContainer>
-        <Heading>
-          {new Date(year, month).toLocaleString("default", {
-            month: "long",
-            year: "numeric"
-          })}
-        </Heading>
-        <DaysContainer>
-          {monthDays.map((week, weekIndex) => (
-            <React.Fragment key={weekIndex}>
-              {week.map((dayData, dayIndex) =>
-                dayData.date === null ? (
-                  <DaySquare key={dayIndex} />
-                ) : (
-                  <DaySquare
-                    key={dayIndex}
-                    onClick={() => handleDayClick(dayData)}
-                  >
-                    <div>{dayData.day}</div>
-                    <img src={dayData.image} alt={`Day ${dayData.day}`} />
-                  </DaySquare>
-                )
-              )}
-            </React.Fragment>
-          ))}
-        </DaysContainer>
-      </MonthPickerContainer>
+      <MonthPickerContainer>{allMonths}</MonthPickerContainer>
     </Container>
   );
 };

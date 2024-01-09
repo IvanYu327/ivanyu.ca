@@ -6,7 +6,7 @@ import MonthPicker from "./MonthPicker";
 const CatchOfTheDay = () => {
   return (
     <div>
-      <MonthPicker year={2024} month={0} />
+      <MonthPicker startYear={2023} startMonth={10} />
     </div>
   );
 };
