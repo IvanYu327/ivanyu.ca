@@ -1,7 +1,12 @@
 import React, { ReactNode } from "react";
 
 import { ROUTES } from "../constants/routes";
-import { BMEtoCS, WebsiteDysmorphia, Blocks } from "../views/writing_content";
+import {
+  BMEtoCS,
+  WebsiteDysmorphia,
+  Blocks,
+  CatchOfTheDay
+} from "../views/writing_content";
 
 type Entry = {
   title: string;
@@ -13,10 +18,11 @@ type Entry = {
 
 export const WRITING: Entry[] = [
   {
-    title: "fish are friends, sometimes food",
+    title: "Catch of the day",
     created: "10-07-2023",
     lastUpdated: "10-07-2023",
-    to: ""
+    to: "",
+    content: <CatchOfTheDay />
   },
   {
     title: "large tanks review",
