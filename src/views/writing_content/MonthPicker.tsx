@@ -10,6 +10,8 @@ interface Day {
 interface MonthPickerProps {
   startYear: number;
   startMonth: number;
+  selectedDate: Date | null;
+  setSelectedDate: (date: Date | null) => void;
 }
 
 const Container = styled.div`
@@ -17,16 +19,6 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
-`;
-
-const SelectedDate = styled.div`
-  text-align: center;
-  margin-bottom: 10px;
-
-  img {
-    max-width: 100px;
-    max-height: 100px;
-  }
 `;
 
 const MonthPickerContainer = styled.div`
@@ -43,7 +35,7 @@ const DaysContainer = styled.div`
   gap: 5px;
 `;
 
-const DaySquare = styled.div`
+const DaySquare = styled.div<{ isSelected: boolean }>`
   width: 50px;
   height: 50px;
   display: flex;
@@ -51,6 +43,8 @@ const DaySquare = styled.div`
   justify-content: center;
   cursor: pointer;
   user-select: none;
+  background-color: ${(props) =>
+    props.isSelected ? "lightcyan" : "transparent"};
 
   &:hover {
     background-color: lightcyan;
@@ -62,11 +56,14 @@ const DaySquare = styled.div`
   }
 `;
 
-const MonthPicker: React.FC<MonthPickerProps> = ({ startYear, startMonth }) => {
-  const [selectedDate, setSelectedDate] = useState<Day | null>(null);
-
+const MonthPicker: React.FC<MonthPickerProps> = ({
+  startYear,
+  startMonth,
+  selectedDate,
+  setSelectedDate
+}) => {
   const handleDayClick = (dayData: Day) => {
-    setSelectedDate(dayData);
+    setSelectedDate(dayData.date);
   };
 
   const generateMonthDays = (year: number, month: number): Day[][] => {
@@ -126,10 +123,16 @@ const MonthPicker: React.FC<MonthPickerProps> = ({ startYear, startMonth }) => {
               <React.Fragment key={weekIndex}>
                 {week.map((dayData, dayIndex) =>
                   dayData.date === null ? (
-                    <DaySquare key={dayIndex} />
+                    <DaySquare key={dayIndex} isSelected={false} />
                   ) : (
                     <DaySquare
                       key={dayIndex}
+                      isSelected={
+                        selectedDate
+                          ? dayData.date.toDateString() ===
+                            selectedDate.toDateString()
+                          : false
+                      }
                       onClick={() => handleDayClick(dayData)}
                     >
                       <div>{dayData.day}</div>
@@ -147,16 +150,6 @@ const MonthPicker: React.FC<MonthPickerProps> = ({ startYear, startMonth }) => {
 
   return (
     <Container>
-      <SelectedDate>
-        {selectedDate && (
-          <div>
-            <img src={selectedDate.image} alt={`Day ${selectedDate.day}`} />
-            <p>
-              {selectedDate.date ? selectedDate.date.toDateString() : "no date"}
-            </p>
-          </div>
-        )}
-      </SelectedDate>
       <MonthPickerContainer>{allMonths}</MonthPickerContainer>
     </Container>
   );
