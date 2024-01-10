@@ -61,14 +61,14 @@ export const WRITING: Entry[] = [
     created: "10-07-2023",
     lastUpdated: "10-07-2023",
     to: ""
-  },
-  {
-    title: "Fast blocks",
-    created: "10-07-2023",
-    lastUpdated: "10-07-2023",
-    to: "",
-    content: <Blocks />
   }
+  // {
+  //   title: "Fast blocks",
+  //   created: "10-07-2023",
+  //   lastUpdated: "10-07-2023",
+  //   to: "",
+  //   content: <Blocks />
+  // }
 ];
 
 WRITING.forEach((entry) => {

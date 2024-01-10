@@ -1,10 +1,15 @@
 import React, { useState } from "react";
+import { FaFishFins } from "react-icons/fa6";
 import styled from "styled-components";
+
+import { Heading3 } from "../../styles";
+
+import { Fishies, Fishie } from "./fish/fish";
 
 interface Day {
   day: number;
   date: Date | null;
-  image: string; // Replace with the actual image source type
+  image: string | undefined; // Replace with the actual image source type
 }
 
 interface MonthPickerProps {
@@ -21,9 +26,7 @@ const Container = styled.div`
   margin-top: 20px;
 `;
 
-const MonthPickerContainer = styled.div`
-  text-align: center;
-`;
+const MonthPickerContainer = styled.div``;
 
 const Heading = styled.h2`
   margin-bottom: 10px;
@@ -43,16 +46,17 @@ const DaySquare = styled.div<{ isSelected: boolean }>`
   justify-content: center;
   cursor: pointer;
   user-select: none;
-  background-color: ${(props) =>
-    props.isSelected ? "lightcyan" : "transparent"};
+  background-color: ${(props) => (props.isSelected ? "gray" : "transparent")};
+  opacity: ${(props) => (props.isSelected ? 1 : 0.5)};
 
   &:hover {
-    background-color: lightcyan;
+    background-color: gray;
+    opacity: 1;
   }
 
   img {
-    max-width: 30px;
-    max-height: 30px;
+    max-width: 50px;
+    max-height: 50px;
   }
 `;
 
@@ -80,7 +84,15 @@ const MonthPicker: React.FC<MonthPickerProps> = ({
 
     for (let day = 1; day <= daysInMonth; day++) {
       const date = new Date(year, month, day);
-      const dayData: Day = { day, date, image: "path/to/image.jpg" }; // Replace with actual image source
+
+      const fishie: Fishie | undefined = Fishies.find(
+        (element) =>
+          selectedDate &&
+          date &&
+          element.date.toDateString() === date.toDateString()
+      );
+
+      const dayData: Day = { day, date, image: fishie?.image }; // Replace with actual image source
 
       if (monthDays[currentWeek].length === 7) {
         monthDays.push([]);
@@ -112,17 +124,17 @@ const MonthPicker: React.FC<MonthPickerProps> = ({
 
       allMonths.push(
         <div key={`${year}-${month}`}>
-          <Heading>
+          <Heading3>
             {new Date(year, month).toLocaleString("default", {
               month: "long",
               year: "numeric"
             })}
-          </Heading>
+          </Heading3>
           <DaysContainer>
             {monthDays.map((week, weekIndex) => (
               <React.Fragment key={weekIndex}>
-                {week.map((dayData, dayIndex) =>
-                  dayData.date === null ? (
+                {week.map((dayData, dayIndex) => {
+                  return dayData.date === null ? (
                     <DaySquare key={dayIndex} isSelected={false} />
                   ) : (
                     <DaySquare
@@ -135,11 +147,16 @@ const MonthPicker: React.FC<MonthPickerProps> = ({
                       }
                       onClick={() => handleDayClick(dayData)}
                     >
-                      <div>{dayData.day}</div>
-                      <img src={dayData.image} alt={`Day ${dayData.day}`} />
+                      {dayData.image ? (
+                        <img src={dayData.image} alt={`Day ${dayData.day}`} />
+                      ) : (
+                        <div>
+                          <FaFishFins />
+                        </div>
+                      )}
                     </DaySquare>
-                  )
-                )}
+                  );
+                })}
               </React.Fragment>
             ))}
           </DaysContainer>

@@ -1,11 +1,14 @@
+import { AtlanticBluefinTuna } from "../../../assets/images";
+
 export type Fishie = {
   date: Date;
   commonName: string;
   scientificName: string;
   url: string;
   image: string;
-  description: string;
   rating: number;
+  description: string;
+  funFact: string;
 };
 
 export const Fishies: Fishie[] = [
@@ -14,10 +17,23 @@ export const Fishies: Fishie[] = [
     commonName: "Atlantic Bluefin Tuna",
     scientificName: "Thunnus thynnus",
     url: "https://en.wikipedia.org/wiki/Atlantic_bluefin_tuna",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Thunnus_thynnus_-_Gervais.jpg/440px-Thunnus_thynnus_-_Gervais.jpg",
+    image: AtlanticBluefinTuna,
+    rating: 10,
     description:
-      "The Atlantic bluefin tuna is a species of tuna in the family Scombridae. It is variously known as the northern bluefin tuna, giant bluefin tuna, and formerly as the tunny. Atlantic bluefins are native to both the western and eastern Atlantic Ocean, as well as the Mediterranean Sea.",
-    rating: 4
+      "Tastes amazing in sushi, an absolute unit of a fish, and a great way to start the new year. One of the few fish that ranks so high not because they",
+    funFact:
+      "This is the largest tuna species, being built for speed with retractable fins and flush eyeballs, reaching speeds of 70 km/hr. That's faster than snail, I think."
+  },
+  {
+    date: new Date(2024, 0, 10),
+    commonName: "Atlantic Bluefin Tuna",
+    scientificName: "Thunnus thynnus",
+    url: "https://en.wikipedia.org/wiki/Atlantic_bluefin_tuna",
+    image: AtlanticBluefinTuna,
+    rating: 10,
+    description:
+      "Tastes amazing in sushi, an absolute unit of a fish, and a great way to start the new year. One of the few fish that ranks so high not because they",
+    funFact:
+      "This is the largest tuna species, being built for speed with retractable fins and flush eyeballs, reaching speeds of 70 km/hr. That's faster than snail, I think."
   }
 ];

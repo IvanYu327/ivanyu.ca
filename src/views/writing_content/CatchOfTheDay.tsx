@@ -61,10 +61,12 @@ const CatchOfTheDay = () => {
       <SelectedDate>
         {selectedDate && (
           <div>
-            {/* <img src={} alt={`Day ${selectedDate}`} /> */}
+            <img src={fishie?.image} alt={fishie?.commonName} />
             <p>{selectedDate.toDateString()}</p>
-            <p>{fishie && fishie.commonName}</p>
-            <p>{fishie && fishie.description}</p>
+            <p>{fishie?.commonName}</p>
+            <p>{fishie?.rating}/10</p>
+            <p>{fishie?.description}</p>
+            <p>{fishie?.funFact}</p>
           </div>
         )}
       </SelectedDate>

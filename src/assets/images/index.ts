@@ -12,3 +12,6 @@ export { default as BuildABoty1 } from "./projects/BuildABoty1.png";
 
 // Ivan
 export { default as Ivan } from "./misc/ivan.jpg";
+
+// Fish
+export { default as AtlanticBluefinTuna } from "./fish/AtlanticBluefinTuna.jpg";
