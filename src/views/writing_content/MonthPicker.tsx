@@ -47,7 +47,7 @@ const DaySquare = styled.div<{ isSelected: boolean }>`
   cursor: pointer;
   user-select: none;
   background-color: ${(props) => (props.isSelected ? "gray" : "transparent")};
-  opacity: ${(props) => (props.isSelected ? 1 : 0.5)};
+  opacity: ${(props) => (props.isSelected ? 1 : 0.25)};
 
   &:hover {
     background-color: gray;
