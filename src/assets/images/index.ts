@@ -19,3 +19,4 @@ export { default as Stripey } from "./fish/Stripey.jpg";
 export { default as LargemouthBass } from "./fish/LargemouthBass.jpg";
 export { default as ThresherShark } from "./fish/ThresherShark.jpg";
 export { default as PeacockMantisShrimp } from "./fish/PeacockMantisShrimp.jpg";
+export { default as OceanSunfish } from "./fish/OceanSunfish.jpg";
