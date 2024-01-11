@@ -20,9 +20,9 @@ export const Fishies: Fishie[] = [
     image: AtlanticBluefinTuna,
     rating: 10,
     description:
-      "Tastes amazing in sushi, an absolute unit of a fish, and a great way to start the new year. One of the few fish that ranks so high not because they",
+      "Tastes amazing in sushi, an absolute unit of a fish, and a great way to start the new year. One of the few fish that ranks so high not because it's a cool fish, but because it tastes so good.",
     funFact:
-      "This is the largest tuna species, being built for speed with retractable fins and flush eyeballs, reaching speeds of 70 km/hr. That's faster than snail, I think."
+      "This is the largest tuna species, being built for speed with retractable fins and flush eyeballs, reaching speeds of 70 km/hr. That's faster than snail."
   },
   {
     date: new Date(2024, 0, 2),
@@ -128,7 +128,7 @@ export const Fishies: Fishie[] = [
     image: AtlanticBluefinTuna,
     rating: 10,
     description:
-      "Tastes amazing in sushi, an absolute unit of a fish, and a great way to start the new year. One of the few fish that ranks so high not because they",
+      "Tastes amazing in sushi, an absolute unit of a fish, and a great way to start the new year. One of the few fish that ranks so high not because it's a cool fish, but because I love eating it so much.",
     funFact:
       "This is the largest tuna species, being built for speed with retractable fins and flush eyeballs, reaching speeds of 70 km/hr. That's faster than snail, I think."
   },

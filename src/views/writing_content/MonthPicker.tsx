@@ -38,7 +38,7 @@ const DaysContainer = styled.div`
   gap: 5px;
 `;
 
-const DaySquare = styled.div<{ isSelected: boolean }>`
+const DaySquare = styled.div<{ hasDate: boolean; isSelected: boolean }>`
   width: 50px;
   height: 50px;
   display: flex;
@@ -50,7 +50,7 @@ const DaySquare = styled.div<{ isSelected: boolean }>`
   opacity: ${(props) => (props.isSelected ? 1 : 0.25)};
 
   &:hover {
-    background-color: gray;
+    background-color: ${(props) => (props.hasDate ? "gray" : "transparent")};
     opacity: 1;
   }
 
@@ -139,10 +139,15 @@ const MonthPicker: React.FC<MonthPickerProps> = ({
               <React.Fragment key={weekIndex}>
                 {week.map((dayData, dayIndex) => {
                   return dayData.date === null ? (
-                    <DaySquare key={dayIndex} isSelected={false} />
+                    <DaySquare
+                      key={dayIndex}
+                      hasDate={false}
+                      isSelected={false}
+                    />
                   ) : (
                     <DaySquare
                       key={dayIndex}
+                      hasDate={true}
                       isSelected={
                         selectedDate
                           ? dayData.date.toDateString() ===
