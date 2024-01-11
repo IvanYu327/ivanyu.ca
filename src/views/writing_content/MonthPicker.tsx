@@ -34,13 +34,13 @@ const Heading = styled.h2`
 
 const DaysContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(7, 50px);
+  grid-template-columns: repeat(7, 70px);
   gap: 5px;
 `;
 
 const DaySquare = styled.div<{ hasDate: boolean; isSelected: boolean }>`
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,8 +55,8 @@ const DaySquare = styled.div<{ hasDate: boolean; isSelected: boolean }>`
   }
 
   img {
-    max-width: 50px;
-    max-height: 50px;
+    max-width: 70px;
+    max-height: 70px;
   }
 `;
 

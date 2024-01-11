@@ -5,7 +5,8 @@ import {
   OceanSunfish,
   PeacockMantisShrimp,
   Stripey,
-  ThresherShark
+  ThresherShark,
+  VampireSquid
 } from "../../../assets/images";
 
 export type Fishie = {
@@ -93,14 +94,14 @@ export const Fishies: Fishie[] = [
   },
   {
     date: new Date(2024, 0, 8),
-    commonName: "Atlantic Bluefin Tuna",
-    scientificName: "Thunnus thynnus",
-    image: AtlanticBluefinTuna,
+    commonName: "Vampire squid",
+    scientificName: "Vampyroteuthis infernalis",
+    image: VampireSquid,
     rating: 10,
     description:
-      "Tastes amazing in sushi, an absolute unit of a fish, and a great way to start the new year. One of the few fish that ranks so high not because they",
+      "It's the only cephalopod that doesn't squirt ink, and instead uses bioluminescence to confuse predators, which is very effective given that it lives 600-900 meters deep. Flashbang!",
     funFact:
-      "This is the largest tuna species, being built for speed with retractable fins and flush eyeballs, reaching speeds of 70 km/hr. That's faster than snail, I think."
+      "This squid is a living fossil, and is the only survivng member of its family."
   },
   {
     date: new Date(2024, 0, 9),
