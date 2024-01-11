@@ -16,7 +16,7 @@ const CatchOfTheDay = () => {
   return (
     <div>
       <SelectedDate>
-        {selectedDate && (
+        {selectedDate && selectedDate <= new Date() ? (
           <div>
             <img src={fishie?.image} alt={fishie?.commonName} />
             <p>{selectedDate.toDateString()}</p>
@@ -24,6 +24,10 @@ const CatchOfTheDay = () => {
             <p>{fishie?.rating}/10</p>
             <p>{fishie?.description}</p>
             <p>{fishie?.funFact}</p>
+          </div>
+        ) : (
+          <div>
+            Come back on {selectedDate?.toDateString()} to see this fishie!
           </div>
         )}
       </SelectedDate>
@@ -38,7 +42,6 @@ const CatchOfTheDay = () => {
 };
 
 const SelectedDate = styled.div`
-  text-align: center;
   margin-bottom: 10px;
 
   img {

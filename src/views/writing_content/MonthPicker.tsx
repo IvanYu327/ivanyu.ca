@@ -92,7 +92,11 @@ const MonthPicker: React.FC<MonthPickerProps> = ({
           element.date.toDateString() === date.toDateString()
       );
 
-      const dayData: Day = { day, date, image: fishie?.image }; // Replace with actual image source
+      const dayData: Day = {
+        day,
+        date,
+        image: date <= new Date() ? fishie?.image : undefined
+      }; // Replace with actual image source
 
       if (monthDays[currentWeek].length === 7) {
         monthDays.push([]);
