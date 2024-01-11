@@ -22,3 +22,4 @@ export { default as PeacockMantisShrimp } from "./fish/PeacockMantisShrimp.jpg";
 export { default as OceanSunfish } from "./fish/OceanSunfish.jpg";
 export { default as BlueRingedOctopus } from "./fish/BlueRingedOctopus.jpg";
 export { default as VampireSquid } from "./fish/VampireSquid.jpg";
+export { default as BowmouthGuitarfish } from "./fish/BowmouthGuitarfish.jpg";

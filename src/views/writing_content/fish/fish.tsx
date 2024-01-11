@@ -1,6 +1,7 @@
 import {
   AtlanticBluefinTuna,
   BlueRingedOctopus,
+  BowmouthGuitarfish,
   LargemouthBass,
   OceanSunfish,
   PeacockMantisShrimp,
@@ -105,14 +106,13 @@ export const Fishies: Fishie[] = [
   },
   {
     date: new Date(2024, 0, 9),
-    commonName: "Atlantic Bluefin Tuna",
-    scientificName: "Thunnus thynnus",
-    image: AtlanticBluefinTuna,
+    commonName: "Bowmouth guitarfish",
+    scientificName: "Rhina ancylostoma",
+    image: BowmouthGuitarfish,
     rating: 10,
     description:
-      "Tastes amazing in sushi, an absolute unit of a fish, and a great way to start the new year. One of the few fish that ranks so high not because they",
-    funFact:
-      "This is the largest tuna species, being built for speed with retractable fins and flush eyeballs, reaching speeds of 70 km/hr. That's faster than snail, I think."
+      "Although this fish looks like a shark, it is actually a ray, and is one of the most unique looking fish I've ever seen",
+    funFact: "It's also critically endangered, so I hope it doesn't go extinct."
   },
   {
     date: new Date(2024, 0, 10),
@@ -120,10 +120,8 @@ export const Fishies: Fishie[] = [
     scientificName: "Thunnus thynnus",
     image: AtlanticBluefinTuna,
     rating: 10,
-    description:
-      "Tastes amazing in sushi, an absolute unit of a fish, and a great way to start the new year. One of the few fish that ranks so high not because it's a cool fish, but because I love eating it so much.",
-    funFact:
-      "This is the largest tuna species, being built for speed with retractable fins and flush eyeballs, reaching speeds of 70 km/hr. That's faster than snail, I think."
+    description: "Tastes",
+    funFact: "This."
   },
   {
     date: new Date(2024, 0, 11),
@@ -131,10 +129,8 @@ export const Fishies: Fishie[] = [
     scientificName: "Thunnus thynnus",
     image: AtlanticBluefinTuna,
     rating: 10,
-    description:
-      "Tastes amazing in sushi, an absolute unit of a fish, and a great way to start the new year. One of the few fish that ranks so high not because they",
-    funFact:
-      "This is the largest tuna species, being built for speed with retractable fins and flush eyeballs, reaching speeds of 70 km/hr. That's faster than snail, I think."
+    description: "T",
+    funFact: "Tink."
   },
   {
     date: new Date(2024, 0, 12),
@@ -142,9 +138,7 @@ export const Fishies: Fishie[] = [
     scientificName: "Thunnus thynnus",
     image: AtlanticBluefinTuna,
     rating: 10,
-    description:
-      "Tastes amazing in sushi, an absolute unit of a fish, and a great way to start the new year. One of the few fish that ranks so high not because they",
-    funFact:
-      "This is the largest tuna species, being built for speed with retractable fins and flush eyeballs, reaching speeds of 70 km/hr. That's faster than snail, I think."
+    description: "Tthey",
+    funFact: "Tink."
   }
 ];
