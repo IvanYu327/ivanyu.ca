@@ -1,5 +1,6 @@
 import {
   AtlanticBluefinTuna,
+  BlueRingedOctopus,
   LargemouthBass,
   OceanSunfish,
   PeacockMantisShrimp,
@@ -76,20 +77,19 @@ export const Fishies: Fishie[] = [
     image: OceanSunfish,
     rating: 10,
     description:
-      "They can grow to be 2 tons, and are the largest bony fish in the world. Though massive and weird looking, are harmless and pretty stupid.",
+      "They can grow up to 2 tons, and are the largest bony fish in the world. Though massive and weird looking, they're harmless and pretty stupid.",
     funFact:
       "These fish are so braindead, that aquariums will usually have circular tanks, nets in front of walls, or jets of water to keep them from swimming into walls and killing themselves."
   },
   {
     date: new Date(2024, 0, 7),
-    commonName: "Atlantic Bluefin Tuna",
-    scientificName: "Thunnus thynnus",
-    image: AtlanticBluefinTuna,
+    commonName: "Blue-ringed octopus",
+    scientificName: "Hapalochlaena lunulata",
+    image: BlueRingedOctopus,
     rating: 10,
     description:
-      "Tastes amazing in sushi, an absolute unit of a fish, and a great way to start the new year. One of the few fish that ranks so high not because they",
-    funFact:
-      "This is the largest tuna species, being built for speed with retractable fins and flush eyeballs, reaching speeds of 70 km/hr. That's faster than snail, I think."
+      "Beautiful but deadly octopus. The vemon from this bad boy can kill 26 grown adults in a few minutes. It's also the size of a golf ball, so it's pretty cute.",
+    funFact: ""
   },
   {
     date: new Date(2024, 0, 8),

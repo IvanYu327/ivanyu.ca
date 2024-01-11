@@ -18,11 +18,11 @@ const CatchOfTheDay = () => {
   return (
     <div>
       <Heading4>
-        As a software engineer by day but marine life enthusiast by night, the
-        catch of the day is a review of noteworthy or interesting marine life.
+        Catch of the day is a review of noteworthy or interesting marine life.
         This is meant to highlight the beauty of the ocean and its inhabitants,
         and to share my passion for unique marine life.
       </Heading4>
+      <Heading4>They also make good trivia facts.</Heading4>
       <Heading4>Swim around.</Heading4>
       <br />
       <br />
