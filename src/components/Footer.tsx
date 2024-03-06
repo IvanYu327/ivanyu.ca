@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
         <SocialButton href="https://ch.tetr.io/u/weew00" target="_blank">
           <TetrioLogo src={Tetrio} alt="Tetrio logo" />
         </SocialButton>
-        <SocialButton href="https://twitter.com/weewoo327" target="_blank">
+        <SocialButton href="https://twitter.com/ivanyuuuuu" target="_blank">
           <XLogo>𝕏</XLogo>
         </SocialButton>
       </SocialsContainer>
