@@ -72,7 +72,7 @@ const experiences = [
     logoSrc: DeepBreatheLogo,
     title: "DeepBreathe AI",
     description: "Lung Ultrasound AI",
-    href: "https://www.riotgames.com/",
+    href: "https://deepbreathe.ai/",
   },
   {
     logoSrc: iVenutoLogo,
