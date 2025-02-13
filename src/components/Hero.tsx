@@ -1,3 +1,5 @@
+import playClickSound from "../utils/sound";
+
 export default function Hero() {
   return (
     <div>
@@ -14,7 +16,11 @@ export default function Hero() {
 
       <div class="mt-2">
         Feel free to reach me at{" "}
-        <a class="underline" href="mailto:i7yu@uwaterloo.ca">
+        <a
+          class="underline"
+          href="mailto:i7yu@uwaterloo.ca"
+          onMouseEnter={playClickSound}
+        >
           i7yu@uwaterloo.ca
         </a>
       </div>
