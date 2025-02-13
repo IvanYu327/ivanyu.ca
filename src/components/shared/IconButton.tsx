@@ -1,5 +1,6 @@
 import { IconTypes } from "solid-icons";
 import { JSX } from "solid-js";
+import playClickSound from "../../utils/sound";
 
 interface IconButtonProps {
   icon: IconTypes | ((props: { size?: number; class?: string }) => JSX.Element);
@@ -18,6 +19,7 @@ export default function IconButton({
       target="_blank"
       rel="noopener noreferrer"
       class={`inline-flex items-center justify-center transition cursor-pointer ${className}`}
+      onMouseEnter={playClickSound}
     >
       <Icon
         size={24}

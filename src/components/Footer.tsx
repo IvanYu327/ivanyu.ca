@@ -13,8 +13,9 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer class="my-4">
-      <Line />
-      <div class="flex justify-between items-center py-4">
+      <Line class="absolute left-0 w-screen" />
+
+      <div class="flex justify-between items-center mt-4 py-4">
         <span class="italic">made by and about ivan yu</span>
         <div class="flex space-x-4">
           {socialLinks.map(({ icon, href }) => (
