@@ -27,7 +27,7 @@ export default function Experience() {
           title={exp.title}
           description={exp.description}
           href={exp.href}
-          onMouseEnter={exp.onMouseEnter || playClickSound}
+          onMouseEnter={exp.onMouseEnter}
           onMouseLeave={exp.onMouseLeave}
         />
       ))}
