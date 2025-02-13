@@ -1,85 +1,31 @@
-import React from "react";
-import { BsLinkedin, BsGithub } from "react-icons/bs";
-import styled from "styled-components";
+import { JSX } from "solid-js";
+import IconButton, { XIcon } from "./shared/IconButton";
+import Line from "./shared/Line";
 
-import { Tetrio } from "../assets/images";
-import { Caption, Heading2 } from "../styles";
+import { ImGithub, ImLinkedin } from "solid-icons/im";
 
-const Footer: React.FC = () => {
+const socialLinks = [
+  { icon: ImGithub, href: "https://github.com/IvanYu327" },
+  { icon: ImLinkedin, href: "https://www.linkedin.com/in/ivanyu327/" },
+  { icon: XIcon, href: "https://x.com/ivanyuuuuu" },
+];
+
+export default function Footer() {
   return (
-    <Container>
-      <Caption>made by and about ivan yu</Caption>
-      <SocialsContainer>
-        <SocialButton
-          href="https://www.linkedin.com/in/ivanyu327/"
-          target="_blank"
-        >
-          <BsLinkedinIcon />
-        </SocialButton>
-        <SocialButton href="https://github.com/IvanYu327" target="_blank">
-          <BsGithubIcon />
-        </SocialButton>
-        <SocialButton href="https://ch.tetr.io/u/weew00" target="_blank">
-          <TetrioLogo src={Tetrio} alt="Tetrio logo" />
-        </SocialButton>
-        <SocialButton href="https://twitter.com/ivanyuuuuu" target="_blank">
-          <XLogo>𝕏</XLogo>
-        </SocialButton>
-      </SocialsContainer>
-    </Container>
+    <footer class="my-4">
+      <Line class="absolute left-0 w-screen" />
+
+      <div class="flex justify-between items-center mt-4 py-4">
+        <div>
+          <div class="italic">made by and about ivan yu</div>
+          <div class="italic text-sm">last update: 9:28pm 02/15/2024</div>
+        </div>
+        <div class="flex space-x-4">
+          {socialLinks.map(({ icon, href }) => (
+            <IconButton icon={icon} href={href} />
+          ))}
+        </div>
+      </div>
+    </footer>
   );
-};
-
-export default Footer;
-
-const Container = styled.div`
-  height: 100px;
-  display: flex;
-  justify-content: space-between;
-  border-top: 0.5px solid white;
-  margin-top: 32px;
-  padding-top: 16px;
-`;
-
-const SocialsContainer = styled.div`
-  display: flex;
-`;
-
-const SocialButton = styled.a`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  height: 32px;
-  width: 32px;
-  margin-left: 8px;
-  background: none;
-  border-radius: 50%;
-  transition: background 0.5s ease;
-  cursor: pointer;
-  text-decoration: none;
-
-  &:hover {
-    background: #77777777;
-  }
-`;
-
-const BsLinkedinIcon = styled(BsLinkedin)`
-  font-size: 16px;
-  color: gray;
-`;
-
-const BsGithubIcon = styled(BsGithub)`
-  font-size: 16px;
-  color: gray;
-`;
-
-const TetrioLogo = styled.img`
-  width: 16px;
-  height: auto;
-`;
-
-const XLogo = styled(Heading2)`
-  color: gray;
-  font-size: 20px;
-`;
+}
