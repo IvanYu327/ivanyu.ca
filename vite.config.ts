@@ -9,6 +9,7 @@ export default defineConfig({
     port: 3434,
   },
   build: {
+    outDir: "dist",
     target: "esnext",
   },
 });
