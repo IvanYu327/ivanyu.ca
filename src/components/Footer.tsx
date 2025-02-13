@@ -36,7 +36,9 @@ export default function Footer() {
       <div class="flex justify-between items-center mt-4 py-4">
         <div>
           <div class="italic">made by and about ivan yu</div>
-          <div class="italic text-sm">last update: {lastUpdate()}</div>
+          <div class="italic text-sm">
+            last update: {lastUpdate() || "loading..."}
+          </div>
         </div>
         <div class="flex space-x-4">
           {socialLinks.map(({ icon, href }) => (
