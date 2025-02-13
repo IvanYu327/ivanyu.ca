@@ -1,4 +1,7 @@
+import { createSignal } from "solid-js";
+import { clickSound } from "../assets/sounds";
+
 export default function playClickSound() {
-  const audio = new Audio("src/assets/positive-click.mp3");
+  const audio = new Audio(clickSound);
   audio.play();
 }

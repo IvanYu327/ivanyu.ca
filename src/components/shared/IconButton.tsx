@@ -18,13 +18,10 @@ export default function IconButton({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      class={`inline-flex items-center justify-center transition cursor-pointer ${className}`}
+      class={`inline-flex items-center justify-center cursor-pointer ${className}`}
       onMouseEnter={playClickSound}
     >
-      <Icon
-        size={24}
-        class="text-gray-500 hover:text-black transition cursor-pointer"
-      />
+      <Icon size={24} class="text-gray-500 hover:text-black transition" />
     </a>
   );
 }
