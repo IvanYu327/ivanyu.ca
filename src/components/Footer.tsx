@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
 export default Footer;
 
 const Container = styled.div`
-  height: 100px;
+  height: 110px;
   display: flex;
   justify-content: space-between;
   border-top: 0.5px solid white;
