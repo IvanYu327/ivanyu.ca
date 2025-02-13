@@ -2,12 +2,13 @@ import { JSX } from "solid-js";
 import IconButton, { XIcon } from "./shared/IconButton";
 import Line from "./shared/Line";
 
-import { ImGithub, ImLinkedin } from "solid-icons/im";
+import { ImGithub, ImInstagram, ImLinkedin } from "solid-icons/im";
 
 const socialLinks = [
   { icon: ImGithub, href: "https://github.com/IvanYu327" },
   { icon: ImLinkedin, href: "https://www.linkedin.com/in/ivanyu327/" },
   { icon: XIcon, href: "https://x.com/ivanyuuuuu" },
+  { icon: ImInstagram, href: "https://www.instagram.com/ivanyuuu/" },
 ];
 
 export default function Footer() {
