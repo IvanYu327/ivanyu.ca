@@ -16,7 +16,10 @@ export default function Footer() {
       <Line class="absolute left-0 w-screen" />
 
       <div class="flex justify-between items-center mt-4 py-4">
-        <span class="italic">made by and about ivan yu</span>
+        <div>
+          <div class="italic">made by and about ivan yu</div>
+          <div class="italic text-sm">last update: 9:28pm 02/15/2024</div>
+        </div>
         <div class="flex space-x-4">
           {socialLinks.map(({ icon, href }) => (
             <IconButton icon={icon} href={href} />

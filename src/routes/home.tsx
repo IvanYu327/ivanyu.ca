@@ -1,14 +1,13 @@
 import Experience from "../components/Experience";
-import Card from "../components/shared/Card";
+import Hero from "../components/Hero";
+import Hobbies from "../components/Hobbies";
 
 export default function Home() {
   return (
     <div>
-      <div>hero</div>
+      <Hero />
       <Experience />
-      <div>hobbies</div>
-      <div></div>
-      <div>hero</div>
+      {/* <Hobbies /> */}
     </div>
   );
 }

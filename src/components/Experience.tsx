@@ -13,7 +13,7 @@ import ExperienceCard from "./ExperienceCard";
 
 export default function Experience() {
   return (
-    <>
+    <div class="pt-4">
       <span class="font-semibold text-lg">Engineering</span>
       {experiences.map((exp, index) => (
         <ExperienceCard
@@ -23,7 +23,7 @@ export default function Experience() {
           href={exp.href}
         />
       ))}
-    </>
+    </div>
   );
 }
 
