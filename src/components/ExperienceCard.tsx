@@ -20,7 +20,6 @@ export default function ExperienceCard({
       target="_blank"
       rel="noopener noreferrer"
       class="flex items-center p-4 bg-white rounded-lg hover:bg-gray-200 transition-all"
-      onMouseEnter={playClickSound}
       {...props}
     >
       <div class="w-16 h-16 bg-gray-300 rounded-lg overflow-hidden mr-4">

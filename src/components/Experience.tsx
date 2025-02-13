@@ -1,3 +1,4 @@
+import { on } from "solid-js";
 import {
   CognixionLogo,
   ComposerLogo,
@@ -8,19 +9,26 @@ import {
   RampLogo,
   RiotLogo,
 } from "../assets";
-import playClickSound from "../utils/sound";
+import playClickSound, {
+  testValorantSound,
+  valorantSound,
+} from "../utils/sound";
 import ExperienceCard from "./ExperienceCard";
 
 export default function Experience() {
   return (
     <div class="pt-4">
-      <span class="font-semibold text-lg">Engineering</span>
+      <span class="font-semibold text-lg" onClick={valorantSound.play}>
+        Engineering
+      </span>
       {experiences.map((exp, index) => (
         <ExperienceCard
           logoSrc={exp.logoSrc}
           title={exp.title}
           description={exp.description}
           href={exp.href}
+          onMouseEnter={exp.onMouseEnter || playClickSound}
+          onMouseLeave={exp.onMouseLeave}
         />
       ))}
     </div>
@@ -39,6 +47,8 @@ const experiences = [
     title: "Riot Games",
     description: "Valorant Agents",
     href: "https://www.riotgames.com/",
+    onMouseEnter: valorantSound.play,
+    onMouseLeave: valorantSound.stop,
   },
   {
     logoSrc: KikoffLogo,
