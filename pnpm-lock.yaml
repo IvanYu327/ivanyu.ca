@@ -11,6 +11,9 @@ dependencies:
   '@tailwindcss/vite':
     specifier: ^4.0.6
     version: 4.0.6(vite@6.1.0)
+  solid-icons:
+    specifier: ^1.1.0
+    version: 1.1.0(solid-js@1.9.4)
   solid-js:
     specifier: ^1.9.3
     version: 1.9.4
@@ -1114,6 +1117,14 @@ packages:
   /seroval@1.2.1:
     resolution: {integrity: sha512-yBxFFs3zmkvKNmR0pFSU//rIsYjuX418TnlDmc2weaq5XFDqDIV/NOMPBoLrbxjLH42p4UzRuXHryXh9dYcKcw==}
     engines: {node: '>=10'}
+
+  /solid-icons@1.1.0(solid-js@1.9.4):
+    resolution: {integrity: sha512-IesTfr/F1ElVwH2E1110s2RPXH4pujKfSs+koT8rwuTAdleO5s26lNSpqJV7D1+QHooJj18mcOiz2PIKs0ic+A==}
+    peerDependencies:
+      solid-js: '*'
+    dependencies:
+      solid-js: 1.9.4
+    dev: false
 
   /solid-js@1.9.4:
     resolution: {integrity: sha512-ipQl8FJ31bFUoBNScDQTG3BjN6+9Rg+Q+f10bUbnO6EOTTf5NGerJeHc7wyu5I4RMHEl/WwZwUmy/PTRgxxZ8g==}

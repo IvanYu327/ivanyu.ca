@@ -8,26 +8,6 @@ export default function Test() {
       <Card />
       <Card />
       <Card />
-      <Card />
-      <Card /> <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card /> <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card /> <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
     </div>
   );
 }
