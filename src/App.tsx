@@ -1,16 +1,13 @@
-import { Component } from "solid-js";
-import styles from "./App.module.css";
-import Card from "./components/Card";
 import { RouteSectionProps } from "@solidjs/router";
-import Line from "./components/Line";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 export default function App({ children }: RouteSectionProps) {
   return (
-    <div class={styles.App}>
-      <h1 class="text-3xl font-bold">Header!</h1>
-      <Line />
-      {children}
-      <h1 class="text-3xl font-bold">Footer!</h1>
+    <div class="min-h-screen flex flex-col px-5 sm:px-10 min-w-[300px] max-w-[640px] mx-auto">
+      <Header />
+      <main class="flex-grow">{children}</main>
+      <Footer />
     </div>
   );
 }
