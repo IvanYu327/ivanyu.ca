@@ -1,4 +1,3 @@
-import { on } from "solid-js";
 import {
   CognixionLogo,
   ComposerLogo,
@@ -9,10 +8,7 @@ import {
   RampLogo,
   RiotLogo,
 } from "../assets";
-import playClickSound, {
-  testValorantSound,
-  valorantSound,
-} from "../utils/sound";
+import { valorantSound } from "../utils/sound";
 import ExperienceCard from "./ExperienceCard";
 
 export default function Experience() {

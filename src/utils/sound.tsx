@@ -3,12 +3,12 @@ import { ClickSound, ValorantSound } from "../assets";
 
 export default function playClickSound() {
   const audio = new Audio(ClickSound);
-  audio.play();
+  audio.play().catch(() => {});
 }
 
 export function testValorantSound() {
   const audio = new Audio(ValorantSound);
-  audio.play();
+  audio.play().catch(() => {});
 }
 
 export const valorantSound = (() => {
@@ -21,7 +21,13 @@ export const valorantSound = (() => {
     play: () => {
       if (!isPlaying()) {
         audio.currentTime = 0;
-        audio.play().then(() => setIsPlaying(true));
+        audio
+          .play()
+          .then(() => setIsPlaying(true))
+          .catch(() => {
+            audio.pause();
+            setIsPlaying(false);
+          });
       }
     },
     stop: () => {
