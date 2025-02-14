@@ -49,6 +49,7 @@ const experiences = [
     href: "https://www.riotgames.com/",
     onMouseEnter: valorantSound.play,
     onMouseLeave: valorantSound.stop,
+    tag: "Internship",
   },
   {
     logoSrc: KikoffLogo,

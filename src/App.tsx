@@ -6,7 +6,7 @@ import styles from "./App.module.css";
 
 export default function App({ children }: RouteSectionProps) {
   return (
-    <div class="min-h-screen flex flex-col px-5 sm:px-10 min-w-[300px] max-w-[640px] mx-auto">
+    <div class="min-h-screen flex flex-col px-5 sm:px-10 min-w-[375px] max-w-[700px] mx-auto">
       <Header />
       <main class="flex-grow" classList={{ [styles["fade-in"]]: true }}>
         {children}
