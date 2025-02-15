@@ -22,9 +22,7 @@ import ExperienceCard from "./ExperienceCard";
 export default function ExperienceSection() {
   return (
     <div class="pt-4">
-      <span class="font-semibold text-lg" onClick={valorantSound.play}>
-        Experience
-      </span>
+      <span class="font-semibold text-lg">Experience</span>
       {experiences.map((exp, index) => (
         <ExperienceCard exp={exp} />
       ))}
