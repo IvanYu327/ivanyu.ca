@@ -23,7 +23,7 @@ export default function ExperienceSection() {
   return (
     <div class="pt-4">
       <span class="font-semibold text-lg" onClick={valorantSound.play}>
-        Engineering
+        Experience
       </span>
       {experiences.map((exp, index) => (
         <ExperienceCard exp={exp} />
