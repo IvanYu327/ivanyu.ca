@@ -4,16 +4,26 @@ import playClickSound from "../../utils/sound";
 
 interface IconButtonProps {
   icon: IconTypes | ((props: { size?: number; class?: string }) => JSX.Element);
-  href: string;
+  size?: "sm" | "md" | "lg";
+  href?: string;
+  onClick?: () => void;
   className?: string;
 }
 
 export default function IconButton({
   icon: Icon,
   href,
+  size = "md",
+  onClick,
   className,
 }: IconButtonProps) {
-  return (
+  const handleClick = () => {
+    onClick?.();
+  };
+
+  const sizepx = size === "sm" ? 16 : size === "lg" ? 32 : 24;
+
+  return href ? (
     <a
       href={href}
       target="_blank"
@@ -21,8 +31,17 @@ export default function IconButton({
       class={`inline-flex items-center justify-center cursor-pointer ${className}`}
       onMouseEnter={playClickSound}
     >
-      <Icon size={24} class="text-gray-500 hover:text-black transition" />
+      <Icon size={sizepx} class="text-gray-500 hover:text-black transition" />
     </a>
+  ) : (
+    <button
+      type="button"
+      class={`inline-flex items-center justify-center cursor-pointer ${className}`}
+      onMouseEnter={playClickSound}
+      onClick={handleClick}
+    >
+      <Icon size={sizepx} class="text-gray-500 hover:text-black transition" />
+    </button>
   );
 }
 

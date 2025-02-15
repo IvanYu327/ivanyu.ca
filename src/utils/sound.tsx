@@ -1,13 +1,15 @@
 import { createSignal } from "solid-js";
 import { ClickSound, ValorantSound } from "../assets";
 
-export default function playClickSound() {
-  const audio = new Audio(ClickSound);
-  audio.play().catch(() => {});
+const [mute, setMute] = createSignal(true);
+
+export function useMute() {
+  return [mute, setMute] as const;
 }
 
-export function testValorantSound() {
-  const audio = new Audio(ValorantSound);
+export default function playClickSound() {
+  if (mute()) return;
+  const audio = new Audio(ClickSound);
   audio.play().catch(() => {});
 }
 
@@ -19,16 +21,14 @@ export const valorantSound = (() => {
   return {
     isPlaying,
     play: () => {
-      if (!isPlaying()) {
-        audio.currentTime = 0;
-        audio
-          .play()
-          .then(() => setIsPlaying(true))
-          .catch(() => {
-            audio.pause();
-            setIsPlaying(false);
-          });
-      }
+      if (mute() || isPlaying()) return;
+      audio
+        .play()
+        .then(() => setIsPlaying(true))
+        .catch(() => {
+          audio.pause();
+          setIsPlaying(false);
+        });
     },
     stop: () => {
       if (audio && isPlaying()) {

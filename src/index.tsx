@@ -18,7 +18,6 @@ render(
   () => (
     <Router root={App}>
       <Route path="/" component={Home} />
-      <Route path="/test" component={() => <div>test</div>} />
     </Router>
   ),
   root!
