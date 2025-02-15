@@ -1,44 +1,48 @@
+import { Experience } from "../types";
 import playClickSound from "../utils/sound";
 
+import styles from "./ExperienceCard.module.css";
+
 interface CardProps {
-  logoSrc: string;
-  title: string;
-  description: string;
-  href: string;
-  onMouseEnter?: () => void;
-  onMouseLeave?: () => void;
+  exp: Experience;
 }
 
-export default function ExperienceCard({
-  logoSrc,
-  title,
-  description,
-  href,
-  onMouseEnter,
-  onMouseLeave,
-  ...props
-}: CardProps) {
+export default function ExperienceCard({ exp, ...props }: CardProps) {
   return (
     <a
-      href={href}
+      href={exp.href}
       target="_blank"
       rel="noopener noreferrer"
-      class="flex items-center p-4 bg-white rounded-lg hover:bg-gray-200 transition-all"
-      onMouseEnter={onMouseEnter || playClickSound}
-      onMouseLeave={onMouseLeave}
+      class={`${styles.card}`}
+      onMouseEnter={exp.onMouseEnter || playClickSound}
+      onMouseLeave={exp.onMouseLeave}
       {...props}
     >
-      <div class="w-16 h-16 bg-gray-300 rounded-lg overflow-hidden mr-4">
-        <img
-          src={logoSrc}
-          alt="Company Logo"
-          class="w-full h-full object-cover"
+      {/* Background Overlay */}
+      {exp.bgSrc && (
+        <div
+          class={styles.cardBackground}
+          style={{
+            "background-image": `url(${exp.bgSrc})`,
+            width: `${exp.width || 400}px`,
+            top: `${exp.bgOffsetY || 0}px`,
+          }}
         />
-      </div>
+      )}
 
-      <div class="flex flex-col">
-        <span class="font-semibold text-lg">{title}</span>
-        <span class="text-sm text-gray-600">{description}</span>
+      <div class={styles.cardContent}>
+        <div class={styles.logoContainer}>
+          <img
+            src={exp.logoSrc}
+            alt={`${exp.title} Logo`}
+            class={styles.logo}
+          />
+        </div>
+
+        <div class={styles.textContent}>
+          <span class={styles.title}>{exp.title}</span>
+          <span class={styles.description}>{exp.description}</span>
+        </div>
       </div>
     </a>
   );
