@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <header class="my-4">
       <div class="flex justify-between items-center">
-        <h1>ivan yu</h1>
+        <p>ivan yu</p>
         {mute() ? (
           <IconButton
             icon={FaSolidVolumeXmark}
