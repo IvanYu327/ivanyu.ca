@@ -1,0 +1,82 @@
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.card:hover {
+  background-color: rgba(240, 240, 240, 1);
+}
+
+.cardBackground {
+  position: absolute;
+  top: 0;
+  width: 240px;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: right top;
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+  z-index: 0;
+}
+
+.card:hover .cardBackground {
+  opacity: 1;
+  transition: opacity 0.35s ease-in-out;
+}
+
+.cardBackground::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(240, 240, 240, 1) 0%,
+    rgba(240, 240, 240, 0.8) 25%,
+    rgba(240, 240, 240, 0) 75%,
+    rgba(240, 240, 240, 0) 100%
+  );
+}
+
+.cardContent {
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.logoContainer {
+  width: 4rem;
+  height: 4rem;
+  background-color: #d1d5db;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.description {
+  font-size: 0.875rem;
+  color: #4b5563;
+}
