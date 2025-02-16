@@ -32,15 +32,29 @@ export default function Footer() {
   return (
     <footer class="my-4">
       <Line class="absolute left-0 w-screen" />
-
       <div class="flex justify-between items-center mt-4 py-4">
-        <div>
-          <div class="italic">made by and about ivan yu</div>
+        <div class="w-[150px]">
           <div class="italic text-sm">
             last update: {lastUpdate() || "loading..."}
           </div>
         </div>
-        <div class="flex space-x-4">
+        {/* Webring */}
+        <div class="flex items-center gap-2">
+          <a href="https://cs.uwatering.com/#https://ivan-yu.ca/?nav=prev">←</a>
+          <a
+            href="https://cs.uwatering.com/#https://ivan-yu.ca/"
+            target="_blank"
+          >
+            <img
+              src="https://cs.uwatering.com/icon.black.svg"
+              alt="CS Webring"
+              class="w-6 h-auto opacity-80"
+            />
+          </a>
+          <a href="https://cs.uwatering.com/#https://ivan-yu.ca/?nav=next">→</a>
+        </div>
+
+        <div class="flex space-x-4 w-[150px]">
           {socialLinks.map(({ icon, href }) => (
             <IconButton icon={icon} href={href} />
           ))}
