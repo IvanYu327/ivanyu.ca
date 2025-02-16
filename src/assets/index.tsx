@@ -25,7 +25,7 @@ import HackTheNorth1 from "./images/hackthenorth1.avif";
 import Cat from "./images/cat.webp";
 
 // Sounds
-import ClickSound from "./sounds/positive-click.mp3";
+import ClickSound from "./sounds/click2.mp3";
 import ValorantSound from "./sounds/valorant.mp3";
 
 export {
