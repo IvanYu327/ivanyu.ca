@@ -5,6 +5,7 @@ import "./index.css";
 import App from "./App";
 import { Route, Router } from "@solidjs/router";
 import Home from "./routes/home";
+import NotFound from "./routes/404";
 
 const root = document.getElementById("root");
 
@@ -18,6 +19,8 @@ render(
   () => (
     <Router root={App}>
       <Route path="/" component={Home} />
+      {/* 404 */}
+      <Route path="*" component={NotFound} />
     </Router>
   ),
   root!

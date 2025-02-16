@@ -19,7 +19,7 @@ async function fetchLastCommit() {
   try {
     const response = await fetch(url);
     const data = await response.json();
-    return new Date(data.commit.committer.date).toLocaleString();
+    return new Date(data.commit.committer.date).toLocaleDateString();
   } catch (error) {
     console.error("Error fetching last commit:", error);
     return "Loading ...";

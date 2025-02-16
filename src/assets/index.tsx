@@ -22,6 +22,8 @@ import Cognixion1 from "./images/cognixion1.png";
 import HackTheNorthLogo from "./images/hackthenorth.png";
 import HackTheNorth1 from "./images/hackthenorth1.avif";
 
+import Cat from "./images/cat.webp";
+
 // Sounds
 import ClickSound from "./sounds/positive-click.mp3";
 import ValorantSound from "./sounds/valorant.mp3";
@@ -43,6 +45,7 @@ export {
   Cognixion1,
   HackTheNorthLogo,
   HackTheNorth1,
+  Cat,
   //   Sounds
   ClickSound,
   ValorantSound,
