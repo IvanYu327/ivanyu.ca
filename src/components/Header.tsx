@@ -1,7 +1,7 @@
 import { FaSolidVolumeHigh, FaSolidVolumeXmark } from "solid-icons/fa";
 import IconButton from "./shared/IconButton";
 import Line from "./shared/Line";
-import { useMute } from "../utils/sound";
+import playClickSound, { useMute } from "../utils/sound";
 
 export default function Header() {
   const [mute, setMute] = useMute();

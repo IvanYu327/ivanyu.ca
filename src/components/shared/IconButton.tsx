@@ -17,10 +17,6 @@ export default function IconButton({
   onClick,
   className,
 }: IconButtonProps) {
-  const handleClick = () => {
-    onClick?.();
-  };
-
   const sizepx = size === "sm" ? 16 : size === "lg" ? 32 : 24;
 
   return href ? (
@@ -38,7 +34,7 @@ export default function IconButton({
       type="button"
       class={`inline-flex items-center justify-center cursor-pointer ${className}`}
       onMouseEnter={playClickSound}
-      onClick={handleClick}
+      onClick={() => onClick?.()}
     >
       <Icon size={sizepx} class="text-gray-500 hover:text-black transition" />
     </button>
