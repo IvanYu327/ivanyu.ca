@@ -1,7 +1,7 @@
-import { Experience } from "../types";
-import playClickSound from "../utils/sound";
+import { Experience } from '../types';
+import playClickSound from '../utils/sound';
 
-import styles from "./ExperienceCard.module.css";
+import styles from './ExperienceCard.module.css';
 
 interface CardProps {
   exp: Experience;
@@ -23,7 +23,7 @@ export default function ExperienceCard({ exp, ...props }: CardProps) {
         <div
           class={styles.cardBackground}
           style={{
-            "background-image": `url(${exp.bgSrc})`,
+            'background-image': `url(${exp.bgSrc})`,
             width: `${exp.width || 400}px`,
             top: `${exp.bgOffsetY || 0}px`,
           }}

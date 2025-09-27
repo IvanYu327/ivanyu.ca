@@ -1,4 +1,4 @@
-import playClickSound from "../utils/sound";
+import playClickSound from '../utils/sound';
 
 export default function Hero() {
   return (
@@ -15,7 +15,7 @@ export default function Hero() {
       </div>
 
       <div class="mt-2">
-        Feel free to reach me at{" "}
+        Feel free to reach me at{' '}
         <a
           class="underline"
           href="mailto:i7yu@uwaterloo.ca"

@@ -1,10 +1,10 @@
-import { IconTypes } from "solid-icons";
-import { JSX } from "solid-js";
-import playClickSound from "../../utils/sound";
+import { IconTypes } from 'solid-icons';
+import { JSX } from 'solid-js';
+import playClickSound from '../../utils/sound';
 
 interface IconButtonProps {
   icon: IconTypes | ((props: { size?: number; class?: string }) => JSX.Element);
-  size?: "sm" | "md" | "lg";
+  size?: 'sm' | 'md' | 'lg';
   href?: string;
   onClick?: () => void;
   className?: string;
@@ -13,11 +13,11 @@ interface IconButtonProps {
 export default function IconButton({
   icon: Icon,
   href,
-  size = "md",
+  size = 'md',
   onClick,
   className,
 }: IconButtonProps) {
-  const sizepx = size === "sm" ? 16 : size === "lg" ? 32 : 24;
+  const sizepx = size === 'sm' ? 16 : size === 'lg' ? 32 : 24;
 
   return href ? (
     <a

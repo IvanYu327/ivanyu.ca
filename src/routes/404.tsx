@@ -1,4 +1,4 @@
-import { Cat } from "../assets";
+import { Cat } from '../assets';
 
 export default function NotFound() {
   return (

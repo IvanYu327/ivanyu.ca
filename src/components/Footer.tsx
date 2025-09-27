@@ -1,19 +1,19 @@
-import { createResource, JSX } from "solid-js";
-import IconButton, { XIcon } from "./shared/IconButton";
-import Line from "./shared/Line";
+import { createResource, JSX } from 'solid-js';
+import IconButton, { XIcon } from './shared/IconButton';
+import Line from './shared/Line';
 
-import { ImGithub, ImLinkedin } from "solid-icons/im";
-import { FaBrandsInstagram } from "solid-icons/fa";
+import { ImGithub, ImLinkedin } from 'solid-icons/im';
+import { FaBrandsInstagram } from 'solid-icons/fa';
 
 const socialLinks = [
-  { icon: ImGithub, href: "https://github.com/IvanYu327" },
-  { icon: ImLinkedin, href: "https://www.linkedin.com/in/ivanyu327/" },
-  { icon: XIcon, href: "https://x.com/ivanyuuuuu" },
-  { icon: FaBrandsInstagram, href: "https://www.instagram.com/ivanyuuu/" },
+  { icon: ImGithub, href: 'https://github.com/IvanYu327' },
+  { icon: ImLinkedin, href: 'https://www.linkedin.com/in/ivanyu327/' },
+  { icon: XIcon, href: 'https://x.com/ivanyuuuuu' },
+  { icon: FaBrandsInstagram, href: 'https://www.instagram.com/ivanyuuu/' },
 ];
 
 async function fetchLastCommit() {
-  const repo = "IvanYu327/ivanyu.ca";
+  const repo = 'IvanYu327/ivanyu.ca';
   const url = `https://api.github.com/repos/${repo}/commits/main`;
 
   try {
@@ -21,8 +21,8 @@ async function fetchLastCommit() {
     const data = await response.json();
     return new Date(data.commit.committer.date).toLocaleDateString();
   } catch (error) {
-    console.error("Error fetching last commit:", error);
-    return "Loading ...";
+    console.error('Error fetching last commit:', error);
+    return 'Loading ...';
   }
 }
 
@@ -35,7 +35,7 @@ export default function Footer() {
       <div class="flex justify-between items-center mt-4 py-4">
         <div class="w-[150px]">
           <div class="italic text-sm">
-            last update: {lastUpdate() || "loading..."}
+            last update: {lastUpdate() || 'loading...'}
           </div>
         </div>
         {/* Webring */}

@@ -32,7 +32,7 @@
 }
 
 .cardBackground::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(

@@ -1,5 +1,5 @@
-import { createSignal } from "solid-js";
-import { ClickSound, ValorantSound } from "../assets";
+import { createSignal } from 'solid-js';
+import { ClickSound, ValorantSound } from '../assets';
 
 const [mute, setMute] = createSignal(true);
 

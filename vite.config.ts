@@ -1,7 +1,7 @@
-import { defineConfig } from "vite";
-import solidPlugin from "vite-plugin-solid";
-import vercel from "solid-start-vercel";
-import tailwindcss from "@tailwindcss/vite";
+import { defineConfig } from 'vite';
+import solidPlugin from 'vite-plugin-solid';
+import vercel from 'solid-start-vercel';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   plugins: [tailwindcss(), solidPlugin({ adapter: vercel() })],
@@ -9,7 +9,7 @@ export default defineConfig({
     port: 3434,
   },
   build: {
-    outDir: "dist",
-    target: "esnext",
+    outDir: 'dist',
+    target: 'esnext',
   },
 });
