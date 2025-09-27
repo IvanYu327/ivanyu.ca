@@ -12,6 +12,7 @@ import {
   KikoffLogo,
   LungUltrasound,
   RampLogo,
+  Ramp1,
   RiotLogo,
   ZapinApp,
 } from '../assets';
@@ -33,9 +34,13 @@ export default function ExperienceSection() {
 const experiences: Experience[] = [
   {
     logoSrc: RampLogo,
+    bgSrc: Ramp1,
+    bgOffsetY: -30,
     title: 'Ramp',
     description: 'Accounting',
     href: 'https://ramp.com/',
+    logoScale: 100,
+    logoBackgroundColor: '#DDF41B',
   },
   {
     logoSrc: RiotLogo,
@@ -46,6 +51,8 @@ const experiences: Experience[] = [
     onMouseEnter: valorantSound.play,
     onMouseLeave: valorantSound.stop,
     tag: 'Internship',
+    logoScale: 100,
+    logoBackgroundColor: '#C3222C',
   },
   {
     logoSrc: KikoffLogo,
@@ -54,6 +61,8 @@ const experiences: Experience[] = [
     title: 'Kikoff',
     description: 'Building Credit',
     href: 'https://kikoff.com/',
+    logoScale: 100,
+    logoBackgroundColor: '#18BC28',
   },
   {
     logoSrc: ComposerLogo,
@@ -63,6 +72,8 @@ const experiences: Experience[] = [
     title: 'Composer',
     description: 'Trading Infrastructure',
     href: 'https://composer.trade/',
+    logoScale: 100,
+    logoBackgroundColor: '#0E1212',
   },
   {
     logoSrc: HackTheNorthLogo,
@@ -71,6 +82,8 @@ const experiences: Experience[] = [
     title: 'Hack the North',
     description: "Canada's Largest Hackathon",
     href: 'https://hackthenorth.com/',
+    logoScale: 100,
+    logoBackgroundColor: '#12181D',
   },
   {
     logoSrc: DeepBreatheLogo,
@@ -80,6 +93,8 @@ const experiences: Experience[] = [
     title: 'DeepBreathe AI',
     description: 'Lung Ultrasound AI',
     href: 'https://deepbreathe.ai/',
+    logoScale: 100,
+    logoBackgroundColor: '#101010',
   },
   {
     logoSrc: iVenutoLogo,
@@ -89,6 +104,8 @@ const experiences: Experience[] = [
     title: 'iVenuto.com',
     description: 'Visitor Management Software',
     href: 'https://www.ivenuto.com/',
+    logoScale: 100,
+    logoBackgroundColor: '#F6F6F6',
   },
   {
     logoSrc: CognixionLogo,
@@ -98,5 +115,7 @@ const experiences: Experience[] = [
     title: 'Cognixion',
     description: 'Mind Controlled AI',
     href: 'https://www.cognixion.com/',
+    logoScale: 100,
+    logoBackgroundColor: '#172423',
   },
 ];

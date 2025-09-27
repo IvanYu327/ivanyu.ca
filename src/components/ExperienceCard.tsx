@@ -31,11 +31,21 @@ export default function ExperienceCard({ exp, ...props }: CardProps) {
       )}
 
       <div class={styles.cardContent}>
-        <div class={styles.logoContainer}>
+        <div
+          class={styles.logoContainer}
+          style={{
+            'background-color': exp.logoBackgroundColor || '#d1d5db',
+          }}
+        >
           <img
             src={exp.logoSrc}
             alt={`${exp.title} Logo`}
             class={styles.logo}
+            style={{
+              transform: exp.logoScale
+                ? `scale(${exp.logoScale / 100})`
+                : 'scale(1)',
+            }}
           />
         </div>
 

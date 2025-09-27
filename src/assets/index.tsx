@@ -1,5 +1,6 @@
 // Images
 import RampLogo from './images/ramp.jpeg';
+import Ramp1 from './images/ramp1.png';
 
 import RiotLogo from './images/riot.png';
 import Cypher from './images/cypher.jpg';
@@ -33,6 +34,7 @@ export {
   RiotLogo,
   Cypher,
   RampLogo,
+  Ramp1,
   KikoffLogo,
   Kikoff1,
   ComposerLogo,
