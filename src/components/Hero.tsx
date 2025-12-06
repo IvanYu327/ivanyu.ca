@@ -7,7 +7,7 @@ export default function Hero() {
 
       <div class="mt-2">
         I'm studying Computer Science at the University of Waterloo. A software
-        engineer constantly exploring and pushing the bounderies of tech.
+        engineer constantly exploring and pushing the boundaries of tech.
       </div>
 
       <div class="mt-2">
